@@ -420,7 +420,7 @@ def create_pantrypal_presentation(output_path="docs/PantryPal-AI-Presentation.pp
     p_csub.space_before = Pt(15)
 
     p_clinks = tf12.add_paragraph()
-    p_clinks.text = "🔗 GitHub Repository: https://github.com/panchaksharayya12/PantryPal-AI\n🌐 Live App: Deployed on Vercel\n📄 Documentation & Presentation: Included in repository /docs"
+    p_clinks.text = "GitHub Repository: https://github.com/panchaksharayya12/PantryPal-AI\nLive App: Deployed on Vercel\nDocumentation & Presentation: Included in repository /docs"
     p_clinks.font.size = Pt(15)
     p_clinks.font.bold = True
     p_clinks.font.color.rgb = EMERALD_LIGHT

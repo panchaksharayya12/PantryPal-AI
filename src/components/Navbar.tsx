@@ -276,11 +276,12 @@ export const Navbar: React.FC<NavbarProps> = ({
                 const next = SUPPORTED_LANGUAGES[(idx + 1) % SUPPORTED_LANGUAGES.length];
                 setLanguage(next.code);
               }}
-              className={`px-2 py-1.5 rounded-xl border text-xs font-bold ${
+              className={`px-2 py-1.5 rounded-xl border text-xs font-bold flex items-center gap-1.5 ${
                 isDark ? 'bg-[#18201B] text-emerald-400 border-white/10' : 'bg-white text-gray-700 border-gray-200'
               }`}
             >
-              🌐 {currentOption.nativeName}
+              <Globe className="w-3.5 h-3.5" />
+              <span>{currentOption.nativeName}</span>
             </button>
 
             {onToggleTheme && (

@@ -446,7 +446,7 @@ export const AiAssistantModal: React.FC<AiAssistantModalProps> = ({
                     <div className="ml-auto flex items-center gap-2">
                       {m.source && (
                         <span className="font-semibold text-emerald-400">
-                          {m.source === 'openai' ? '✨ OpenAI' : '⚡ Local Chef'}
+                          {m.source === 'openai' ? 'OpenAI' : 'Local Chef'}
                         </span>
                       )}
                       <span>{m.timestamp}</span>
@@ -534,10 +534,10 @@ export const AiAssistantModal: React.FC<AiAssistantModalProps> = ({
               </span>
               <span>
                 {language === 'kn'
-                  ? `🎙️ ಕನ್ನಡದಲ್ಲಿ ಆಲಿಸುತ್ತಿದೆ... ಮಾತನಾಡಿ`
+                  ? `ಕನ್ನಡದಲ್ಲಿ ಆಲಿಸುತ್ತಿದೆ... ಮಾತನಾಡಿ`
                   : language === 'hi'
-                  ? `🎙️ हिन्दी में सुन रहे हैं... बोलिए`
-                  : `🎙️ Listening in ${currentOption.name}... Speak now`}
+                  ? `हिन्दी में सुन रहे हैं... बोलिए`
+                  : `Listening in ${currentOption.name}... Speak now`}
               </span>
               {spokenTranscript && (
                 <span className="italic opacity-80 max-w-xs truncate">

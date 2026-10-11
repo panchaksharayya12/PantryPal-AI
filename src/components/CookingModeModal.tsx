@@ -300,7 +300,7 @@ export const CookingModeModal: React.FC<CookingModeModalProps> = ({
             className="p-4 rounded-2xl bg-emerald-500/25 border border-emerald-400/50 text-emerald-200 text-sm font-extrabold inline-flex items-center gap-2 shadow-lg"
           >
             <CheckCircle className="w-5 h-5 text-emerald-400" />
-            <span>{t('finalStepReached', 'Final step reached! Click complete to finish! 🎉')}</span>
+            <span>{t('finalStepReached', 'Final step reached! Click complete to finish!')}</span>
           </motion.div>
         )}
       </div>
@@ -337,7 +337,7 @@ export const CookingModeModal: React.FC<CookingModeModalProps> = ({
               : 'bg-[#315C43] hover:bg-[#264935] text-white border border-white/15'
           }`}
         >
-          <span>{isLastStep ? t('completeRecipe', 'Complete Recipe! 🍲') : t('nextStep', 'Next Step')}</span>
+          <span>{isLastStep ? t('completeRecipe', 'Complete Recipe!') : t('nextStep', 'Next Step')}</span>
           {!isLastStep && <ChevronRight className="w-5 h-5" />}
         </motion.button>
       </div>

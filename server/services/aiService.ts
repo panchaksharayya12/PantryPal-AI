@@ -94,7 +94,7 @@ Keep advice clear, step-by-step, and practical for home cooks.`;
           `2. **ಮೊಟ್ಟೆ ಬುರ್ಜಿ (Egg Bhurji)**: ಬಾಣಲೆಯಲ್ಲಿ ಈರುಳ್ಳಿ, ಟೊಮೇಟೊ, ಸ್ವಲ್ಪ ಗರಂ ಮಸಾಲಾ ಬಾಡಿಸಿ ಮೊಟ್ಟೆ ಸೇರಿಸಿ ಸ್ಕ್ರಾಂಬಲ್ ಮಾಡಿ.\n` +
           `3. **ಮನೆ ಶೈಲಿಯ ಮೊಟ್ಟೆ ಸಾರು (Homestyle Egg Curry)**: ಬೇಯಿಸಿದ ಮೊಟ್ಟೆಗಳನ್ನು ಈರುಳ್ಳಿ-ಟೊಮೇಟೊ ಮಸಾಲೆ ಗ್ರೇವಿಯಲ್ಲಿ ಬೇಯಿಸಿ, ಬಿಸಿ ಅನ್ನ ಅಥವಾ ಚಪಾತಿ ಜೊತೆ ಸವಿಯಿರಿ.\n` +
           `4. **ಶಕ್ಷುಕ (Shakshuka)**: ಮಸಾಲೆ ಭರಿತ ಟೊಮೇಟೊ ಸಾಸ್‌ನಲ್ಲಿ ಮೊಟ್ಟೆಯನ್ನು ಬೇಯಿಸಿ.\n\n` +
-          `💡 *ಕಿಚನ್ ಟಿಪ್:* ಈರುಳ್ಳಿ ಚೆನ್ನಾಗಿ ಕಂದು ಬಣ್ಣ ಬರುವವರೆಗೆ ಹುರಿದರೆ ಗ್ರೇವಿಯ ರುಚಿ ದುಪ್ಪಟ್ಟಾಗುತ್ತದೆ!`;
+          `*ಕಿಚನ್ ಟಿಪ್:* ಈರುಳ್ಳಿ ಚೆನ್ನಾಗಿ ಕಂದು ಬಣ್ಣ ಬರುವವರೆಗೆ ಹುರಿದರೆ ಗ್ರೇವಿಯ ರುಚಿ ದುಪ್ಪಟ್ಟಾಗುತ್ತದೆ!`;
       }
 
       // ONLY Tomato & Onion (No eggs)
@@ -104,7 +104,7 @@ Keep advice clear, step-by-step, and practical for home cooks.`;
           `2. **ಟೊಮೇಟೊ ಗೊಜ್ಜು / ಮಸಾಲೆ ಸಬ್ಜಿ (Spiced Tomato Onion Sabzi)**: ಹೆಚ್ಚಿದ ಈರುಳ್ಳಿ ಮತ್ತು ಟೊಮೇಟೊವನ್ನು ಅರಿಶಿನ, ಖಾರದ ಪುಡಿ, ಗರಂ ಮಸಾಲೆಯೊಂದಿಗೆ ಮಂದ ಉರಿಯಲ್ಲಿ ಬೇಯಿಸಿ. ರೊಟ್ಟಿ ಅಥವಾ ಬಿಸಿ ಅನ್ನಕ್ಕೆ ಪರಿಪೂರ್ಣ ಜೋಡಿ.\n` +
           `3. **ತಾಜಾ ಕಚುಂಬರ್ ಸಲಾಡ್ (Fresh Kachumber Salad)**: ಸಣ್ಣಗೆ ಹೆಚ್ಚಿದ ಈರುಳ್ಳಿ, ಟೊಮೇಟೊಗೆ ನಿಂಬೆರಸ, ಕೊತ್ತಂಬರಿ ಸೊಪ್ಪು, ಉಪ್ಪು ಮತ್ತು ಕಾಳುಮೆಣಸು ಸೇರಿಸಿ ತ್ವರಿತ ಸಲಾಡ್ ಮಾಡಿ.\n` +
           `4. **ತ್ವರಿತ ಟೊಮೇಟೊ ಬಾತ್ (Quick Tomato Rice)**: ಈರುಳ್ಳಿ-ಟೊಮೇಟೊ ಒಗ್ಗರಣೆ ಸಿದ್ಧಪಡಿಸಿ, ಬೇಯಿಸಿದ ಅನ್ನದೊಂದಿಗೆ ಬೆರೆಸಿ 10 ನಿಮಿಷಗಳಲ್ಲಿ ತಯಾರಿಸಿ.\n\n` +
-          `💡 *ಕಿಚನ್ ಟಿಪ್:* ಟೊಮೇಟೊ ಹುಳಿ ಹೆಚ್ಚಿದ್ದರೆ ಸ್ವಲ್ಪ ಬೆಲ್ಲ ಅಥವಾ ಸಕ್ಕರೆ ಸೇರಿಸಿದರೆ ರುಚಿ ಸಮತೋಲನಗೊಳ್ಳುತ್ತದೆ!`;
+          `*ಕಿಚನ್ ಟಿಪ್:* ಟೊಮೇಟೊ ಹುಳಿ ಹೆಚ್ಚಿದ್ದರೆ ಸ್ವಲ್ಪ ಬೆಲ್ಲ ಅಥವಾ ಸಕ್ಕರೆ ಸೇರಿಸಿದರೆ ರುಚಿ ಸಮತೋಲನಗೊಳ್ಳುತ್ತದೆ!`;
       }
 
       if (raw.includes('ಅನ್ನ') || raw.includes('ಚಿತ್ರಾನ್ನ') || q.includes('chitranna')) {
@@ -140,7 +140,7 @@ Keep advice clear, step-by-step, and practical for home cooks.`;
           `2. **अंडा भुर्जी (Egg Bhurji)**: प्याज-टमाटर भूनकर गरम मसाला डालें और अंडे डालकर भूनें।\n` +
           `3. **ढाबा स्टाइल अंडा करी**: उबले अंडे को तेल में हल्का तलें और गाढ़ी प्याज-टमाटर ग्रेवी में पकाएं।\n` +
           `4. **अंडा पराठा**: पराठे के अंदर फेंटा हुआ अंडा डालकर दोनों तरफ से सेकें।\n\n` +
-          `💡 *शेफ टिप:* अंडे फेंटते समय 1 चम्मच दूध डालने से आमलेट बहुत स्पंजी बनता है!`;
+          `*शेफ टिप:* अंडे फेंटते समय 1 चम्मच दूध डालने से आमलेट बहुत स्पंजी बनता है!`;
       }
 
       // ONLY Tomato & Onion (No eggs)
@@ -150,7 +150,7 @@ Keep advice clear, step-by-step, and practical for home cooks.`;
           `2. **मसालेदार टमाटर-प्याज की सब्जी**: जीरा, हींग, हल्दी, धनिया पाउडर और गरम मसाले के साथ 10 मिनट में झटपट बनने वाली स्वादिष्ट सब्जी।\n` +
           `3. **फ्रेश कचुम्बर सलाद**: बारीक कटे टमाटर-प्याज में नींबू का रस, हरी मिर्च, चाट मसाला और हरा धनिया मिलाकर बनाएं।\n` +
           `4. **टमाटर पुलाव / राइस**: प्याज-टमाटर को साबुत मसालों के साथ भूनकर पके हुए चावल में मिलाएं।\n\n` +
-          `💡 *शेफ टिप:* प्याज को मध्यम आंच पर हल्का सुनहरा होने तक भूनें, इससे ग्रेवी में मीठा और रिच स्वाद आता है!`;
+          `*शेफ टिप:* प्याज को मध्यम आंच पर हल्का सुनहरा होने तक भूनें, इससे ग्रेवी में मीठा और रिच स्वाद आता है!`;
       }
 
       if (raw.includes('चावल') || q.includes('chawal')) {
@@ -220,7 +220,7 @@ Keep advice clear, step-by-step, and practical for home cooks.`;
         `   • Hard-boil eggs, shallow fry with turmeric, and simmer in a rich spiced onion-tomato reduction.\n\n` +
         `4. **Mediterranean Shakshuka** (15 mins):\n` +
         `   • Simmer spiced tomato and onion sauce with cumin and paprika, create small wells, and gently poach whole eggs inside.\n\n` +
-        `💡 *Pro Tip:* Keep heat medium-low when cooking eggs to preserve moisture and avoid rubbery texture!`;
+        `*Pro Tip:* Keep heat medium-low when cooking eggs to preserve moisture and avoid rubbery texture!`;
     }
 
     // Case B: User has / asks about TOMATO & ONION (NO EGGS!)
@@ -238,7 +238,7 @@ Keep advice clear, step-by-step, and practical for home cooks.`;
         `   • Cook tempered onions and tomatoes until aromatic, then fold in cooked rice with a spoon of ghee and fresh herbs.\n\n` +
         `5. **Tomato Onion Bruschetta Toast** (8 mins):\n` +
         `   • Dice tomatoes and onions with minced garlic, drizzle with olive oil, salt, and oregano, and spoon over crunchy toasted bread.\n\n` +
-        `💡 *Chef's Secret:* A pinch of sugar or jaggery balances the natural acidity of cooked tomatoes beautifully!`;
+        `*Chef's Secret:* A pinch of sugar or jaggery balances the natural acidity of cooked tomatoes beautifully!`;
     }
 
     // 2. Substitution queries
@@ -247,7 +247,7 @@ Keep advice clear, step-by-step, and practical for home cooks.`;
         if (q.includes(ingredient)) {
           return `Here are the best chef-recommended substitutes for **${ingredient.charAt(0).toUpperCase() + ingredient.slice(1)}**:\n\n` +
             subs.map(s => `• **${s}**`).join('\n') +
-            `\n\n💡 *Culinary Tip:* Match the moisture level of your substitute to avoid altering the recipe's cooking time!`;
+            `\n\n*Culinary Tip:* Match the moisture level of your substitute to avoid altering the recipe's cooking time!`;
         }
       }
       return `Here are the most common kitchen substitutions:\n\n` +
@@ -291,13 +291,13 @@ Keep advice clear, step-by-step, and practical for home cooks.`;
       const items = context.pantryItems.join(', ');
       return `Based on the ingredients currently in your kitchen (**${items}**):\n\n` +
         `You have great culinary possibilities! Explore our recipe cards and 3D culinary orbit above, which have automatically filtered 28+ handcrafted recipes matching your exact produce.\n\n` +
-        `💡 *Cooking Advice:* You can combine your ${context.pantryItems.slice(0, 3).join(' and ')} to create a quick sauté, comforting gravy, or fresh salad. What style of meal are you craving today?`;
+        `*Cooking Advice:* You can combine your ${context.pantryItems.slice(0, 3).join(' and ')} to create a quick sauté, comforting gravy, or fresh salad. What style of meal are you craving today?`;
     }
 
     // 7. General chef advice fallback
     return `Hello chef! I'm your PantryPal AI Culinary Assistant.\n\n` +
       `I can help you create mouthwatering dishes from any ingredients you have on hand, answer cooking questions, and suggest substitutions.\n\n` +
-      `💡 *Great questions to ask me:*
+      `*Great questions to ask me:*
 • "What can I cook with tomato and onion?"
 • "What can I make with eggs, tomato, and onion?"
 • "What are the best substitutes for paneer or eggs?"

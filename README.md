@@ -1,4 +1,4 @@
-# PantryPal AI 🍲
+# PantryPal AI
 
 > **Your Kitchen. Your Ingredients. Endless Possibilities.**  
 > An intelligent, sensory-rich zero-waste culinary platform with 3D Fibonacci spatial visualization, interactive tactical knife prep physics, indigenous Indian multilingual voice guidance (Kannada, Hindi, Tamil, Telugu), and real-time pantry recipe matching.
@@ -12,19 +12,19 @@
 
 ---
 
-## 🚀 Direct Links & Live Deployment
+## Direct Links & Live Deployment
 
 | Resource | Direct Link | Description |
 |---|---|---|
-| 🌐 **Live Website** | [**pantrypal-ai-snowy.vercel.app**](https://pantrypal-ai-snowy.vercel.app) | Production application deployed on Vercel Cloud |
-| 📊 **PowerPoint Presentation (.pptx)** | [**Download PPTX**](https://github.com/panchaksharayya12/PantryPal-AI/raw/main/docs/PantryPal-AI-Presentation.pptx) | Complete 12-slide presentation deck |
-| 📑 **Presentation (Direct Web Preview)** | [**View Slides on GitHub**](./docs/PantryPal-AI-Presentation.md) | Formatted markdown slides viewable directly in browser |
-| 📘 **Word Project Report (.docx)** | [**Download Word Report**](https://github.com/panchaksharayya12/PantryPal-AI/raw/main/docs/PantryPal-AI-Project-Report.docx) | Full engineering report in Microsoft Word format |
-| 📄 **Project Report (Direct Web Preview)** | [**View Report on GitHub**](./docs/PantryPal-AI-Project-Report.md) | Comprehensive engineering documentation in markdown |
+| **Live Website** | [**pantrypal-ai-snowy.vercel.app**](https://pantrypal-ai-snowy.vercel.app) | Production application deployed on Vercel Cloud |
+| **PowerPoint Presentation (.pptx)** | [**Download PPTX**](https://github.com/panchaksharayya12/PantryPal-AI/raw/main/docs/PantryPal-AI-Presentation.pptx) | Complete 12-slide presentation deck |
+| **Presentation (Direct Web Preview)** | [**View Slides on GitHub**](./docs/PantryPal-AI-Presentation.md) | Formatted markdown slides viewable directly in browser |
+| **Word Project Report (.docx)** | [**Download Word Report**](https://github.com/panchaksharayya12/PantryPal-AI/raw/main/docs/PantryPal-AI-Project-Report.docx) | Full engineering report in Microsoft Word format |
+| **Project Report (Direct Web Preview)** | [**View Report on GitHub**](./docs/PantryPal-AI-Project-Report.md) | Comprehensive engineering documentation in markdown |
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
 ### 1. 3D Fibonacci Culinary Orbit
 - Interactive 3D spatial spherical manifold distributing 28+ handcrafted authentic recipes using the golden-ratio Fibonacci algorithm.
@@ -58,7 +58,7 @@
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -82,7 +82,7 @@
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Frontend**: React 19, TypeScript, Vite 6, Tailwind CSS v4, Framer Motion, Lucide Icons, Canvas Confetti.
 - **Backend**: Express.js, TypeScript, Multer, Cors, Dotenv, esbuild.
@@ -93,7 +93,7 @@
 
 ---
 
-## 📡 RESTful API Endpoints
+## RESTful API Endpoints
 
 | Method | Endpoint | Description |
 |---|---|---|
@@ -113,7 +113,7 @@
 
 ---
 
-## 💻 Local Setup & Development
+## Local Setup & Development
 
 ### 1. Clone the Repository
 ```bash
@@ -140,17 +140,17 @@ npm run build
 
 ---
 
-## 📄 Documentation Deliverables
+## Documentation Deliverables
 
 All documentation files are included in the [`docs/`](./docs) directory:
-- [📊 **PantryPal-AI-Presentation.pptx**](./docs/PantryPal-AI-Presentation.pptx) — Professional PowerPoint deck.
-- [📑 **PantryPal-AI-Presentation.md**](./docs/PantryPal-AI-Presentation.md) — Web-viewable presentation slides.
-- [📘 **PantryPal-AI-Project-Report.docx**](./docs/PantryPal-AI-Project-Report.docx) — Formal engineering project report in Word format.
-- [📄 **PantryPal-AI-Project-Report.md**](./docs/PantryPal-AI-Project-Report.md) — Web-viewable engineering report.
+- [**PantryPal-AI-Presentation.pptx**](./docs/PantryPal-AI-Presentation.pptx) — Professional PowerPoint deck.
+- [**PantryPal-AI-Presentation.md**](./docs/PantryPal-AI-Presentation.md) — Web-viewable presentation slides.
+- [**PantryPal-AI-Project-Report.docx**](./docs/PantryPal-AI-Project-Report.docx) — Formal engineering project report in Word format.
+- [**PantryPal-AI-Project-Report.md**](./docs/PantryPal-AI-Project-Report.md) — Web-viewable engineering report.
 
 ---
 
-## 👤 Author & Acknowledgments
+## Author & Acknowledgments
 
 - **Developed by**: **Panchaksharayya**
 - **GitHub**: [@panchaksharayya12](https://github.com/panchaksharayya12)
@@ -159,6 +159,6 @@ All documentation files are included in the [`docs/`](./docs) directory:
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the ISC License.

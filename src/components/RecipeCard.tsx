@@ -65,7 +65,7 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({
   const isReadyToCook = matched.isReadyToCook ?? false;
 
   const fallbackImage =
-    "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400' fill='%23141A16'%3E%3Crect width='100%25' height='100%25' fill='%23141A16'/%3E%3Ccircle cx='300' cy='180' r='80' fill='%231C2620'/%3E%3Ctext x='50%25' y='190' font-size='48' text-anchor='middle' fill='%2310B981'%3E🍲%3C/text%3E%3Ctext x='50%25' y='300' font-family='sans-serif' font-size='20' font-weight='bold' text-anchor='middle' fill='%239CA3AF'%3EPantryPal Kitchen%3C/text%3E%3C/svg%3E";
+    "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400' fill='%23141A16'%3E%3Crect width='100%25' height='100%25' fill='%23141A16'/%3E%3Ccircle cx='300' cy='180' r='80' fill='%231C2620'/%3E%3Ctext x='50%25' y='188' font-family='sans-serif' font-size='22' font-weight='bold' text-anchor='middle' fill='%2310B981'%3ERECIPE%3C/text%3E%3Ctext x='50%25' y='300' font-family='sans-serif' font-size='20' font-weight='bold' text-anchor='middle' fill='%239CA3AF'%3EPantryPal Kitchen%3C/text%3E%3C/svg%3E";
 
   const handleCardClick = () => {
     sounds.playSwoosh();

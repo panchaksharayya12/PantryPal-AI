@@ -1,9 +1,9 @@
-# PantryPal AI — Comprehensive Project Engineering Report 📘
+# PantryPal AI — Comprehensive Project Engineering Report
 
 > **Author**: Panchaksharayya  
 > **GitHub**: [https://github.com/panchaksharayya12/PantryPal-AI](https://github.com/panchaksharayya12/PantryPal-AI)  
-> **Direct Word Document Download**: [📥 Download PantryPal-AI-Project-Report.docx](./PantryPal-AI-Project-Report.docx)  
-> **PowerPoint Slide Deck**: [📊 Download PantryPal-AI-Presentation.pptx](./PantryPal-AI-Presentation.pptx)  
+> **Direct Word Document Download**: [Download PantryPal-AI-Project-Report.docx](./PantryPal-AI-Project-Report.docx)  
+> **PowerPoint Slide Deck**: [Download PantryPal-AI-Presentation.pptx](./PantryPal-AI-Presentation.pptx)  
 > **Status**: Production Release (v1.0.0)
 
 ---

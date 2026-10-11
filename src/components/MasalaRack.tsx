@@ -6,7 +6,6 @@ import { useLanguage } from '../context/LanguageContext.tsx';
 export interface SpiceItem {
   id: string;
   name: string; // standard search term used in recipe matcher
-  emoji: string;
   color: string;
   names: Record<string, string>;
   aromaNotes: Record<string, string>;
@@ -15,9 +14,7 @@ export interface SpiceItem {
 export const MASALA_ITEMS: SpiceItem[] = [
   {
     id: 'turmeric',
-    name: 'Turmeric Powder',
-    emoji: '🟡',
-    color: '#EAB308',
+    name: 'Turmeric Powder', color: '#EAB308',
     names: {
       en: 'Turmeric Powder',
       kn: 'ಅರಿಶಿನ ಪುಡಿ (Haldi)',
@@ -43,9 +40,7 @@ export const MASALA_ITEMS: SpiceItem[] = [
   },
   {
     id: 'cumin',
-    name: 'Cumin Seeds',
-    emoji: '🟤',
-    color: '#B45309',
+    name: 'Cumin Seeds', color: '#B45309',
     names: {
       en: 'Cumin Seeds',
       kn: 'ಜೀರಿಗೆ ಕಾಳುಗಳು (Jeera)',
@@ -71,9 +66,7 @@ export const MASALA_ITEMS: SpiceItem[] = [
   },
   {
     id: 'red_chilli',
-    name: 'Red Chilli Powder',
-    emoji: '🔴',
-    color: '#DC2626',
+    name: 'Red Chilli Powder', color: '#DC2626',
     names: {
       en: 'Red Chilli Powder',
       kn: 'ಅಚ್ಚ ಖಾರದ ಪುಡಿ (Lal Mirch)',
@@ -99,9 +92,7 @@ export const MASALA_ITEMS: SpiceItem[] = [
   },
   {
     id: 'coriander',
-    name: 'Coriander Powder',
-    emoji: '🌿',
-    color: '#15803D',
+    name: 'Coriander Powder', color: '#15803D',
     names: {
       en: 'Coriander Powder',
       kn: 'ಕೊತ್ತಂಬರಿ ಪುಡಿ (Dhania)',
@@ -127,9 +118,7 @@ export const MASALA_ITEMS: SpiceItem[] = [
   },
   {
     id: 'garam_masala',
-    name: 'Garam Masala',
-    emoji: '🤎',
-    color: '#92400E',
+    name: 'Garam Masala', color: '#92400E',
     names: {
       en: 'Garam Masala',
       kn: 'ಗರಂ ಮಸಾಲಾ (Garam Masala)',
@@ -155,9 +144,7 @@ export const MASALA_ITEMS: SpiceItem[] = [
   },
   {
     id: 'mustard_seeds',
-    name: 'Mustard Seeds',
-    emoji: '🟡',
-    color: '#CA8A04',
+    name: 'Mustard Seeds', color: '#CA8A04',
     names: {
       en: 'Mustard Seeds',
       kn: 'ಸಾಸಿವೆ ಕಾಳುಗಳು (Sasive)',
@@ -183,9 +170,7 @@ export const MASALA_ITEMS: SpiceItem[] = [
   },
   {
     id: 'curry_leaves',
-    name: 'Curry Leaves',
-    emoji: '🍃',
-    color: '#16A34A',
+    name: 'Curry Leaves', color: '#16A34A',
     names: {
       en: 'Fresh Curry Leaves',
       kn: 'ತಾಜಾ ಕರಿಬೇವು (Karibevu)',
@@ -211,9 +196,7 @@ export const MASALA_ITEMS: SpiceItem[] = [
   },
   {
     id: 'cardamom',
-    name: 'Cardamom',
-    emoji: '🟢',
-    color: '#059669',
+    name: 'Cardamom', color: '#059669',
     names: {
       en: 'Green Cardamom',
       kn: 'ಏಲಕ್ಕಿ (Elaichi)',
@@ -239,9 +222,7 @@ export const MASALA_ITEMS: SpiceItem[] = [
   },
   {
     id: 'cinnamon',
-    name: 'Cinnamon',
-    emoji: '🪵',
-    color: '#78350F',
+    name: 'Cinnamon', color: '#78350F',
     names: {
       en: 'Cinnamon Sticks',
       kn: 'ದಾಲ್ಚಿನ್ನಿ (Dalchini)',
@@ -267,9 +248,7 @@ export const MASALA_ITEMS: SpiceItem[] = [
   },
   {
     id: 'black_pepper',
-    name: 'Black Pepper',
-    emoji: '⚫',
-    color: '#4B5563',
+    name: 'Black Pepper', color: '#4B5563',
     names: {
       en: 'Black Pepper',
       kn: 'ಕರಿಮೆಣಸು (Karimenasu)',
@@ -295,9 +274,7 @@ export const MASALA_ITEMS: SpiceItem[] = [
   },
   {
     id: 'chaat_masala',
-    name: 'Chaat Masala',
-    emoji: '🧂',
-    color: '#D97706',
+    name: 'Chaat Masala', color: '#D97706',
     names: {
       en: 'Chaat Masala',
       kn: 'ಚಾಟ್ ಮಸಾಲಾ (Chaat Masala)',
@@ -323,9 +300,7 @@ export const MASALA_ITEMS: SpiceItem[] = [
   },
   {
     id: 'kasuri_methi',
-    name: 'Kasuri Methi',
-    emoji: '🌿',
-    color: '#047857',
+    name: 'Kasuri Methi', color: '#047857',
     names: {
       en: 'Kasuri Methi',
       kn: 'ಕಸ್ತೂರಿ ಮೇಥಿ (Kasuri Methi)',
@@ -460,13 +435,18 @@ export const MasalaRack: React.FC<MasalaRackProps> = ({
               }`}
             >
               <div className="flex items-start justify-between">
-                <span className="text-2xl">{spice.emoji}</span>
+                <div
+                  className="w-7 h-7 rounded-full flex items-center justify-center shadow-inner border border-white/20 transition-transform group-hover:scale-110"
+                  style={{ backgroundColor: spice.color }}
+                >
+                  <div className="w-2 rounded-full bg-white/40 blur-[0.5px]" />
+                </div>
                 <span className={`w-5 h-5 rounded-full flex items-center justify-center text-xs font-black ${
                   active
                     ? 'bg-emerald-500 text-white'
                     : isDark ? 'bg-white/10 text-white/50' : 'bg-black/5 text-[#737B72]'
                 }`}>
-                  {active ? '✓' : '+'}
+                  {active ? <Check className="w-3 h-3" /> : '+'}
                 </span>
               </div>
 

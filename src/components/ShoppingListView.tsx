@@ -104,7 +104,7 @@ export const ShoppingListView: React.FC<ShoppingListViewProps> = ({ onListChange
     const unpurchased = items.filter((i) => i.checked === 0);
     const purchased = items.filter((i) => i.checked === 1);
 
-    let text = `🛒 PantryPal AI Shopping List\n\n`;
+    let text = `PantryPal AI Shopping List\n\n`;
 
     if (unpurchased.length > 0) {
       text += `TO BUY (${unpurchased.length}):\n`;

@@ -10,6 +10,7 @@ import {
   Search,
   RefreshCw,
   Flame,
+  Utensils,
   CheckCircle2,
   HelpCircle,
   ScanLine,
@@ -36,110 +37,109 @@ interface IngredientInputProps {
 // Comprehensive culinary dictionary for live predictive autocomplete
 export interface CulinaryEntry {
   name: string;
-  emoji: string;
   category: 'Produce' | 'Protein' | 'Dairy' | 'Pantry' | 'Spice' | 'Herb';
 }
 
 export const CULINARY_DICTIONARY: CulinaryEntry[] = [
   // A
-  { name: 'Apple', emoji: '🍎', category: 'Produce' },
-  { name: 'Avocado', emoji: '🥑', category: 'Produce' },
-  { name: 'Asparagus', emoji: '🌱', category: 'Produce' },
-  { name: 'Almonds', emoji: '🥜', category: 'Pantry' },
-  { name: 'Asafoetida (Hing / ಇಂಗು)', emoji: '🟡', category: 'Spice' },
+  { name: 'Apple', category: 'Produce' },
+  { name: 'Avocado', category: 'Produce' },
+  { name: 'Asparagus', category: 'Produce' },
+  { name: 'Almonds', category: 'Pantry' },
+  { name: 'Asafoetida (Hing / ಇಂಗು)', category: 'Spice' },
   // B
-  { name: 'Banana', emoji: '🍌', category: 'Produce' },
-  { name: 'Basil', emoji: '🌿', category: 'Herb' },
-  { name: 'Bell Pepper', emoji: '🫑', category: 'Produce' },
-  { name: 'Black Pepper (Kali Mirch / ಕರಿಮೆಣಸು)', emoji: '⚫', category: 'Spice' },
-  { name: 'Bread', emoji: '🍞', category: 'Pantry' },
-  { name: 'Broccoli', emoji: '🥦', category: 'Produce' },
-  { name: 'Butter', emoji: '🧈', category: 'Dairy' },
+  { name: 'Banana', category: 'Produce' },
+  { name: 'Basil', category: 'Herb' },
+  { name: 'Bell Pepper', category: 'Produce' },
+  { name: 'Black Pepper (Kali Mirch / ಕರಿಮೆಣಸು)', category: 'Spice' },
+  { name: 'Bread', category: 'Pantry' },
+  { name: 'Broccoli', category: 'Produce' },
+  { name: 'Butter', category: 'Dairy' },
   // C
-  { name: 'Cabbage', emoji: '🥬', category: 'Produce' },
-  { name: 'Capsicum', emoji: '🫑', category: 'Produce' },
-  { name: 'Cardamom (Elaichi / ಏಲಕ್ಕಿ)', emoji: '🟢', category: 'Spice' },
-  { name: 'Carrot', emoji: '🥕', category: 'Produce' },
-  { name: 'Cauliflower', emoji: '🥦', category: 'Produce' },
-  { name: 'Chaat Masala (ಚಾಟ್ ಮಸಾಲಾ)', emoji: '🧂', category: 'Spice' },
-  { name: 'Cheese', emoji: '🧀', category: 'Dairy' },
-  { name: 'Chicken', emoji: '🍗', category: 'Protein' },
-  { name: 'Chickpeas', emoji: '🫘', category: 'Pantry' },
-  { name: 'Cinnamon (Dalchini / ದಾಲ್ಚಿನ್ನಿ)', emoji: '🪵', category: 'Spice' },
-  { name: 'Cloves (Laung / ಲವಂಗ)', emoji: '🤎', category: 'Spice' },
-  { name: 'Coriander Powder (Dhania / ಕೊತ್ತಂಬರಿ ಪುಡಿ)', emoji: '🌿', category: 'Spice' },
-  { name: 'Coriander Leaves', emoji: '🌿', category: 'Herb' },
-  { name: 'Corn', emoji: '🌽', category: 'Produce' },
-  { name: 'Cumin Seeds (Jeera / ಜೀರಿಗೆ)', emoji: '🟤', category: 'Spice' },
-  { name: 'Curry Leaves (Karibevu / कढ़ी पत्ता)', emoji: '🍃', category: 'Herb' },
+  { name: 'Cabbage', category: 'Produce' },
+  { name: 'Capsicum', category: 'Produce' },
+  { name: 'Cardamom (Elaichi / ಏಲಕ್ಕಿ)', category: 'Spice' },
+  { name: 'Carrot', category: 'Produce' },
+  { name: 'Cauliflower', category: 'Produce' },
+  { name: 'Chaat Masala (ಚಾಟ್ ಮಸಾಲಾ)', category: 'Spice' },
+  { name: 'Cheese', category: 'Dairy' },
+  { name: 'Chicken', category: 'Protein' },
+  { name: 'Chickpeas', category: 'Pantry' },
+  { name: 'Cinnamon (Dalchini / ದಾಲ್ಚಿನ್ನಿ)', category: 'Spice' },
+  { name: 'Cloves (Laung / ಲವಂಗ)', category: 'Spice' },
+  { name: 'Coriander Powder (Dhania / ಕೊತ್ತಂಬರಿ ಪುಡಿ)', category: 'Spice' },
+  { name: 'Coriander Leaves', category: 'Herb' },
+  { name: 'Corn', category: 'Produce' },
+  { name: 'Cumin Seeds (Jeera / ಜೀರಿಗೆ)', category: 'Spice' },
+  { name: 'Curry Leaves (Karibevu / कढ़ी पत्ता)', category: 'Herb' },
   // D
-  { name: 'Dal / Lentils', emoji: '🥣', category: 'Pantry' },
-  { name: 'Dates', emoji: '🌴', category: 'Pantry' },
-  { name: 'Dhania (Coriander Powder)', emoji: '🌿', category: 'Spice' },
-  { name: 'Dijon Mustard', emoji: '🟡', category: 'Pantry' },
+  { name: 'Dal / Lentils', category: 'Pantry' },
+  { name: 'Dates', category: 'Pantry' },
+  { name: 'Dhania (Coriander Powder)', category: 'Spice' },
+  { name: 'Dijon Mustard', category: 'Pantry' },
   // E (Special emphasis per user request)
-  { name: 'Eggs', emoji: '🥚', category: 'Protein' },
-  { name: 'Eggplant (Brinjal)', emoji: '🍆', category: 'Produce' },
-  { name: 'Elaichi (Green Cardamom)', emoji: '🟢', category: 'Spice' },
-  { name: 'Edamame', emoji: '🫛', category: 'Protein' },
-  { name: 'Enoki Mushroom', emoji: '🍄', category: 'Produce' },
-  { name: 'Extra Virgin Olive Oil', emoji: '🫒', category: 'Pantry' },
-  { name: 'Endive', emoji: '🥬', category: 'Produce' },
+  { name: 'Eggs', category: 'Protein' },
+  { name: 'Eggplant (Brinjal)', category: 'Produce' },
+  { name: 'Elaichi (Green Cardamom)', category: 'Spice' },
+  { name: 'Edamame', category: 'Protein' },
+  { name: 'Enoki Mushroom', category: 'Produce' },
+  { name: 'Extra Virgin Olive Oil', category: 'Pantry' },
+  { name: 'Endive', category: 'Produce' },
   // F
-  { name: 'Fennel Seeds (Saunf)', emoji: '🌿', category: 'Spice' },
-  { name: 'Fish', emoji: '🐟', category: 'Protein' },
-  { name: 'Flour (Atta/Maida)', emoji: '🌾', category: 'Pantry' },
+  { name: 'Fennel Seeds (Saunf)', category: 'Spice' },
+  { name: 'Fish', category: 'Protein' },
+  { name: 'Flour (Atta/Maida)', category: 'Pantry' },
   // G
-  { name: 'Garlic', emoji: '🧄', category: 'Produce' },
-  { name: 'Garam Masala (ಗರಂ ಮಸಾಲಾ)', emoji: '🤎', category: 'Spice' },
-  { name: 'Ghee', emoji: '🧈', category: 'Dairy' },
-  { name: 'Ginger', emoji: '🫚', category: 'Produce' },
-  { name: 'Green Chilli', emoji: '🌶️', category: 'Produce' },
+  { name: 'Garlic', category: 'Produce' },
+  { name: 'Garam Masala (ಗರಂ ಮಸಾಲಾ)', category: 'Spice' },
+  { name: 'Ghee', category: 'Dairy' },
+  { name: 'Ginger', category: 'Produce' },
+  { name: 'Green Chilli', category: 'Produce' },
   // H
-  { name: 'Haldi (Turmeric Powder)', emoji: '🟡', category: 'Spice' },
-  { name: 'Honey', emoji: '🍯', category: 'Pantry' },
+  { name: 'Haldi (Turmeric Powder)', category: 'Spice' },
+  { name: 'Honey', category: 'Pantry' },
   // J
-  { name: 'Jalapeno', emoji: '🌶️', category: 'Produce' },
-  { name: 'Jeera (Cumin Seeds)', emoji: '🟤', category: 'Spice' },
+  { name: 'Jalapeno', category: 'Produce' },
+  { name: 'Jeera (Cumin Seeds)', category: 'Spice' },
   // K
-  { name: 'Kasuri Methi (ಕಸ್ತೂರಿ ಮೇಥಿ)', emoji: '🌿', category: 'Herb' },
-  { name: 'Kidney Beans (Rajma)', emoji: '🫘', category: 'Pantry' },
+  { name: 'Kasuri Methi (ಕಸ್ತೂರಿ ಮೇಥಿ)', category: 'Herb' },
+  { name: 'Kidney Beans (Rajma)', category: 'Pantry' },
   // L
-  { name: 'Lemon', emoji: '🍋', category: 'Produce' },
-  { name: 'Lime', emoji: '🟢', category: 'Produce' },
+  { name: 'Lemon', category: 'Produce' },
+  { name: 'Lime', category: 'Produce' },
   // M
-  { name: 'Milk', emoji: '🥛', category: 'Dairy' },
-  { name: 'Mint Leaves (Pudina)', emoji: '🌿', category: 'Herb' },
-  { name: 'Mushroom', emoji: '🍄', category: 'Produce' },
-  { name: 'Mustard Seeds (Rai / Sasive)', emoji: '🟡', category: 'Spice' },
+  { name: 'Milk', category: 'Dairy' },
+  { name: 'Mint Leaves (Pudina)', category: 'Herb' },
+  { name: 'Mushroom', category: 'Produce' },
+  { name: 'Mustard Seeds (Rai / Sasive)', category: 'Spice' },
   // O
-  { name: 'Oats', emoji: '🥣', category: 'Pantry' },
-  { name: 'Olive Oil', emoji: '🫒', category: 'Pantry' },
-  { name: 'Onion', emoji: '🧅', category: 'Produce' },
-  { name: 'Oregano', emoji: '🌿', category: 'Herb' },
+  { name: 'Oats', category: 'Pantry' },
+  { name: 'Olive Oil', category: 'Pantry' },
+  { name: 'Onion', category: 'Produce' },
+  { name: 'Oregano', category: 'Herb' },
   // P
-  { name: 'Paneer (Cottage Cheese)', emoji: '🧀', category: 'Dairy' },
-  { name: 'Paprika', emoji: '🔴', category: 'Spice' },
-  { name: 'Pasta', emoji: '🍝', category: 'Pantry' },
-  { name: 'Peas (Matar)', emoji: '🟢', category: 'Produce' },
-  { name: 'Potato', emoji: '🥔', category: 'Produce' },
+  { name: 'Paneer (Cottage Cheese)', category: 'Dairy' },
+  { name: 'Paprika', category: 'Spice' },
+  { name: 'Pasta', category: 'Pantry' },
+  { name: 'Peas (Matar)', category: 'Produce' },
+  { name: 'Potato', category: 'Produce' },
   // R
-  { name: 'Rai (Mustard Seeds)', emoji: '🟡', category: 'Spice' },
-  { name: 'Red Chilli Powder (Lal Mirch / ಖಾರದ ಪುಡಿ)', emoji: '🔴', category: 'Spice' },
-  { name: 'Rice', emoji: '🍚', category: 'Pantry' },
-  { name: 'Rosemary', emoji: '🌿', category: 'Herb' },
+  { name: 'Rai (Mustard Seeds)', category: 'Spice' },
+  { name: 'Red Chilli Powder (Lal Mirch / ಖಾರದ ಪುಡಿ)', category: 'Spice' },
+  { name: 'Rice', category: 'Pantry' },
+  { name: 'Rosemary', category: 'Herb' },
   // S
-  { name: 'Salt', emoji: '🧂', category: 'Spice' },
-  { name: 'Sasive (Mustard Seeds)', emoji: '🟡', category: 'Spice' },
-  { name: 'Soy Sauce', emoji: '🍶', category: 'Pantry' },
-  { name: 'Spinach (Palak)', emoji: '🥬', category: 'Produce' },
+  { name: 'Salt', category: 'Spice' },
+  { name: 'Sasive (Mustard Seeds)', category: 'Spice' },
+  { name: 'Soy Sauce', category: 'Pantry' },
+  { name: 'Spinach (Palak)', category: 'Produce' },
   // T
-  { name: 'Thyme', emoji: '🌿', category: 'Herb' },
-  { name: 'Tofu', emoji: '🧈', category: 'Protein' },
-  { name: 'Tomato', emoji: '🍅', category: 'Produce' },
-  { name: 'Turmeric Powder (Haldi / ಅರಿಶಿನ)', emoji: '🟡', category: 'Spice' },
+  { name: 'Thyme', category: 'Herb' },
+  { name: 'Tofu', category: 'Protein' },
+  { name: 'Tomato', category: 'Produce' },
+  { name: 'Turmeric Powder (Haldi / ಅರಿಶಿನ)', category: 'Spice' },
   // Y
-  { name: 'Yogurt / Curd (Dahi)', emoji: '🥣', category: 'Dairy' },
+  { name: 'Yogurt / Curd (Dahi)', category: 'Dairy' },
 ];
 
 const GUIDED_PROMPTS = [
@@ -284,7 +284,7 @@ export const IngredientInput: React.FC<IngredientInputProps> = ({
               setIngredients((prev) => [...prev, ...newNames]);
               setUploadMessage({
                 type: 'success',
-                text: `🎙️ ${currentOption.nativeName}: ${extracted.map((e) => `${e.emoji} ${e.normalized}`).join(', ')}`
+                text: `${currentOption.nativeName}: ${extracted.map((e) => e.normalized).join(', ')}`
               });
             }
           }
@@ -609,7 +609,16 @@ export const IngredientInput: React.FC<IngredientInputProps> = ({
                             }`}
                           >
                             <div className="flex items-center gap-3">
-                              <span className="text-xl">{item.emoji}</span>
+                              <div className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 text-xs font-bold ${
+                                item.category === 'Produce' ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30' :
+                                item.category === 'Protein' ? 'bg-amber-500/15 text-amber-400 border border-amber-500/30' :
+                                item.category === 'Spice' ? 'bg-red-500/15 text-red-400 border border-red-500/30' :
+                                item.category === 'Herb' ? 'bg-green-500/15 text-green-400 border border-green-500/30' :
+                                item.category === 'Dairy' ? 'bg-blue-500/15 text-blue-400 border border-blue-500/30' :
+                                'bg-white/10 text-[#9CA3AF] border border-white/10'
+                              }`}>
+                                <Utensils className="w-3.5 h-3.5" />
+                              </div>
                               <div>
                                 <span className="font-bold text-sm block">
                                   {item.name}
@@ -836,7 +845,7 @@ export const IngredientInput: React.FC<IngredientInputProps> = ({
 
             <div className="mt-6 pt-4 border-t border-black/10 dark:border-white/10">
               <p className="text-[11px] text-[#737B72] dark:text-[#9CA3AF] leading-tight">
-                🔒 In-memory neural analysis with instant 100% accurate pantry recognition.
+                Secure in-memory neural analysis with instant 100% accurate pantry recognition.
               </p>
             </div>
           </div>

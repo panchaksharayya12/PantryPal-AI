@@ -1,9 +1,9 @@
-# PantryPal AI — Presentation Slide Deck 🍳
+# PantryPal AI — Presentation Slide Deck
 
 > **Next-Generation Zero-Waste Culinary Platform & Multilingual Kitchen Assistant**  
 > **Author**: Panchaksharayya  
 > **GitHub Repository**: [https://github.com/panchaksharayya12/PantryPal-AI](https://github.com/panchaksharayya12/PantryPal-AI)  
-> **PowerPoint Download**: [📥 Download PantryPal-AI-Presentation.pptx](./PantryPal-AI-Presentation.pptx)
+> **PowerPoint Download**: [Download PantryPal-AI-Presentation.pptx](./PantryPal-AI-Presentation.pptx)
 
 ---
 
@@ -149,8 +149,8 @@
 ## Slide 12: Conclusion & Q&A
 - **Summary**: PantryPal AI eliminates kitchen food waste, breaks language barriers, and brings delight back to daily home cooking.
 - **Links**:
-  - 🌐 Live Web App: Deployed on Vercel
-  - 💻 GitHub: [panchaksharayya12/PantryPal-AI](https://github.com/panchaksharayya12/PantryPal-AI)
-  - 📑 Project Report: [`PantryPal-AI-Project-Report.docx`](./PantryPal-AI-Project-Report.docx)
-  - 📊 Slides: [`PantryPal-AI-Presentation.pptx`](./PantryPal-AI-Presentation.pptx)
+  - Live Web App: Deployed on Vercel
+  - GitHub: [panchaksharayya12/PantryPal-AI](https://github.com/panchaksharayya12/PantryPal-AI)
+  - Project Report: [`PantryPal-AI-Project-Report.docx`](./PantryPal-AI-Project-Report.docx)
+  - Slides: [`PantryPal-AI-Presentation.pptx`](./PantryPal-AI-Presentation.pptx)
 

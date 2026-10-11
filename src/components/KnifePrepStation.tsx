@@ -7,7 +7,7 @@ import { useLanguage } from '../context/LanguageContext.tsx';
 interface VegetableItem {
   id: string;
   name: string;
-  emoji: string;
+  code: string;
   color: string;
   names: Record<string, string>;
   cutDetail: string;
@@ -18,7 +18,7 @@ const VEGETABLES: VegetableItem[] = [
   {
     id: 'tomato',
     name: 'Tomato',
-    emoji: '🍅',
+    code: 'TM',
     color: '#EF4444',
     names: {
       en: 'Tomato',
@@ -37,7 +37,7 @@ const VEGETABLES: VegetableItem[] = [
   {
     id: 'onion',
     name: 'Onion',
-    emoji: '🧅',
+    code: 'ON',
     color: '#D97706',
     names: {
       en: 'Onion',
@@ -56,7 +56,7 @@ const VEGETABLES: VegetableItem[] = [
   {
     id: 'capsicum',
     name: 'Capsicum',
-    emoji: '🫑',
+    code: 'CP',
     color: '#10B981',
     names: {
       en: 'Capsicum',
@@ -75,7 +75,7 @@ const VEGETABLES: VegetableItem[] = [
   {
     id: 'carrot',
     name: 'Carrot',
-    emoji: '🥕',
+    code: 'CR',
     color: '#F97316',
     names: {
       en: 'Carrot',
@@ -94,7 +94,7 @@ const VEGETABLES: VegetableItem[] = [
   {
     id: 'potato',
     name: 'Potato',
-    emoji: '🥔',
+    code: 'PT',
     color: '#B45309',
     names: {
       en: 'Potato',
@@ -113,7 +113,7 @@ const VEGETABLES: VegetableItem[] = [
   {
     id: 'garlic',
     name: 'Garlic',
-    emoji: '🧄',
+    code: 'GL',
     color: '#A8A29E',
     names: {
       en: 'Garlic',
@@ -132,7 +132,7 @@ const VEGETABLES: VegetableItem[] = [
   {
     id: 'avocado',
     name: 'Avocado',
-    emoji: '🥑',
+    code: 'AV',
     color: '#84CC16',
     names: {
       en: 'Avocado',
@@ -151,7 +151,7 @@ const VEGETABLES: VegetableItem[] = [
   {
     id: 'spinach',
     name: 'Spinach',
-    emoji: '🥬',
+    code: 'SP',
     color: '#059669',
     names: {
       en: 'Spinach',
@@ -199,7 +199,7 @@ export const KnifePrepStation: React.FC<KnifePrepStationProps> = ({
       setComboCount((prev) => prev + 1);
       onAddIngredient(veg.name);
       const displayName = (veg.names && veg.names[language]) || veg.name;
-      setToastMessage(`🔪 Chef Blade: ${displayName} ${veg.prepAction}! Sliced fresh into your kitchen.`);
+      setToastMessage(`Chef Blade: ${displayName} ${veg.prepAction}! Sliced fresh into your kitchen.`);
       setTimeout(() => setToastMessage(null), 3000);
     }, 240);
   };
@@ -330,28 +330,32 @@ export const KnifePrepStation: React.FC<KnifePrepStationProps> = ({
                   {!isSliced ? (
                     <motion.div
                       animate={isSlashing ? { rotate: [-12, 12, 0], scale: 1.2 } : {}}
-                      className="text-4xl drop-shadow-md group-hover:scale-115 transition-transform duration-200"
+                      className="w-12 h-12 rounded-2xl flex flex-col items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200 border border-white/20"
+                      style={{ backgroundColor: veg.color }}
                     >
-                      {veg.emoji}
+                      <span className="text-white font-black text-xs tracking-wider">{veg.code}</span>
+                      <span className="w-4 h-0.5 bg-white/40 rounded-full mt-0.5" />
                     </motion.div>
                   ) : (
                     /* Sliced Two Halves Separating with Angular Tilt */
-                    <div className="flex items-center justify-center gap-1.5">
+                    <div className="flex items-center justify-center gap-2">
                       <motion.div
                         initial={{ x: 0, rotate: 0 }}
-                        animate={{ x: -8, rotate: -22, y: 2 }}
+                        animate={{ x: -6, rotate: -20, y: 2 }}
                         transition={{ type: 'spring', stiffness: 500, damping: 20 }}
-                        className="text-3xl drop-shadow-sm"
+                        className="w-5 h-11 rounded-l-2xl flex items-center justify-center border-l border-t border-b border-white/25 shadow-md"
+                        style={{ backgroundColor: veg.color }}
                       >
-                        {veg.emoji}
+                        <span className="text-white font-black text-[9px]">{veg.code[0]}</span>
                       </motion.div>
                       <motion.div
                         initial={{ x: 0, rotate: 0 }}
-                        animate={{ x: 8, rotate: 22, y: -2 }}
+                        animate={{ x: 6, rotate: 20, y: -2 }}
                         transition={{ type: 'spring', stiffness: 500, damping: 20 }}
-                        className="text-3xl drop-shadow-sm"
+                        className="w-5 h-11 rounded-r-2xl flex items-center justify-center border-r border-t border-b border-white/25 shadow-md"
+                        style={{ backgroundColor: veg.color }}
                       >
-                        {veg.emoji}
+                        <span className="text-white font-black text-[9px]">{veg.code[1] || ''}</span>
                       </motion.div>
                     </div>
                   )}
@@ -378,7 +382,7 @@ export const KnifePrepStation: React.FC<KnifePrepStationProps> = ({
                           ? 'bg-white/5 text-[#9CA3AF] border border-white/5 group-hover:border-white/20'
                           : 'bg-[#FAF8F2] text-[#737B72]'
                   }`}>
-                    {isSliced ? `${t('sliced', '✓ Sliced')} ${sliceCount > 1 ? `(${sliceCount}x)` : ''}` : isAlreadyInKitchen ? t('inKitchen', 'In Kitchen') : t('tapToSlice', 'Tap to Slice')}
+                    {isSliced ? `${t('sliced', 'Sliced')} ${sliceCount > 1 ? `(${sliceCount}x)` : ''}` : isAlreadyInKitchen ? t('inKitchen', 'In Kitchen') : t('tapToSlice', 'Tap to Slice')}
                   </span>
                 </div>
               </motion.div>
