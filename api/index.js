@@ -1,0 +1,1423 @@
+// server/database/recipesData.ts
+var SEED_RECIPES = [
+  {
+    id: "rec-veg-pulao",
+    name: "Vegetable Pulao",
+    description: "Fragrant basmati rice cooked with mixed vegetables, whole aromatic spices, and fresh herbs in one pot.",
+    cuisine: "Indian",
+    prepTime: 15,
+    cookTime: 20,
+    servings: 4,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "Gluten-Free", "Vegan", "Dairy-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Basmati Rice", quantity: "1.5", unit: "cups" },
+      { name: "Carrot", quantity: "1", unit: "medium" },
+      { name: "Green Peas", quantity: "0.5", unit: "cup" },
+      { name: "Potato", quantity: "1", unit: "medium" },
+      { name: "Onion", quantity: "1", unit: "large" },
+      { name: "Garlic", quantity: "3", unit: "cloves" },
+      { name: "Ginger", quantity: "1", unit: "inch" },
+      { name: "Cumin Seeds", quantity: "1", unit: "tsp" },
+      { name: "Garam Masala", quantity: "1", unit: "tsp" },
+      { name: "Vegetable Oil", quantity: "2", unit: "tbsp" }
+    ],
+    instructions: [
+      "Rinse basmati rice thoroughly until water runs clear and soak for 20 minutes.",
+      "Heat oil in a heavy bottomed pot. Add cumin seeds and let them sizzle.",
+      "Add sliced onions, minced ginger, and garlic; saut\xE9 until golden translucent.",
+      "Add diced carrots, potatoes, and green peas. Saut\xE9 for 3 minutes.",
+      "Add drained rice, garam masala, salt, and 3 cups of water. Bring to a gentle boil.",
+      "Cover with a tight lid, reduce flame to low, and simmer for 15 minutes without disturbing.",
+      "Turn off heat, let it rest for 5 minutes, then fluff with a fork and serve hot."
+    ],
+    calories: 280,
+    protein: 6,
+    carbs: 52,
+    fat: 6,
+    fiber: 4
+  },
+  {
+    id: "rec-masala-omelette",
+    name: "Indian Masala Omelette",
+    description: "A vibrant, spiced street-style omelette whisked with chopped onions, juicy tomatoes, fresh cilantro, and green chilies.",
+    cuisine: "Indian",
+    prepTime: 5,
+    cookTime: 5,
+    servings: 1,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1510693206972-df098062cb71?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["High Protein", "Gluten-Free", "Dairy-Free"],
+    ingredients: [
+      { name: "Eggs", quantity: "2", unit: "large" },
+      { name: "Onion", quantity: "0.5", unit: "medium" },
+      { name: "Tomato", quantity: "0.5", unit: "medium" },
+      { name: "Green Chili", quantity: "1", unit: "piece" },
+      { name: "Coriander Leaves", quantity: "2", unit: "tbsp" },
+      { name: "Turmeric Powder", quantity: "0.25", unit: "tsp" },
+      { name: "Red Chili Powder", quantity: "0.25", unit: "tsp" },
+      { name: "Butter", quantity: "1", unit: "tbsp" }
+    ],
+    instructions: [
+      "Crack eggs into a bowl. Add turmeric, red chili powder, and a pinch of salt. Whisk vigorously until frothy.",
+      "Fold in finely diced onions, tomatoes, green chilies, and freshly chopped coriander.",
+      "Heat butter or oil in a non-stick skillet over medium heat.",
+      "Pour the whisked egg mixture, tilting the pan so it spreads evenly.",
+      "Cook for 2 minutes until the edges firm up and the bottom turns golden.",
+      "Carefully flip the omelette and cook the other side for another 1-2 minutes.",
+      "Fold in half and serve warm with toasted bread or chai."
+    ],
+    calories: 210,
+    protein: 14,
+    carbs: 4,
+    fat: 15,
+    fiber: 1
+  },
+  {
+    id: "rec-paneer-bhurji",
+    name: "Dhaba-Style Paneer Bhurji",
+    description: "Savory scrambled cottage cheese tempered with roasted cumin, aromatic onions, ripe tomatoes, and fragrant ground spices.",
+    cuisine: "Indian",
+    prepTime: 10,
+    cookTime: 12,
+    servings: 3,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "High Protein", "Gluten-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Paneer", quantity: "250", unit: "grams" },
+      { name: "Onion", quantity: "1", unit: "large" },
+      { name: "Tomato", quantity: "2", unit: "medium" },
+      { name: "Capsicum", quantity: "0.5", unit: "medium" },
+      { name: "Garlic", quantity: "3", unit: "cloves" },
+      { name: "Ginger", quantity: "1", unit: "tsp" },
+      { name: "Cumin Seeds", quantity: "0.5", unit: "tsp" },
+      { name: "Turmeric Powder", quantity: "0.5", unit: "tsp" },
+      { name: "Garam Masala", quantity: "0.5", unit: "tsp" },
+      { name: "Butter", quantity: "1", unit: "tbsp" }
+    ],
+    instructions: [
+      "Crumble fresh paneer with your fingers into small uneven bits. Do not grate.",
+      "Heat butter or oil in a pan. Add cumin seeds and let them splutter.",
+      "Add finely chopped onions, minced ginger, and garlic; saut\xE9 until golden brown.",
+      "Add chopped tomatoes and diced capsicum. Cook until tomatoes turn mushy and oil separates.",
+      "Stir in turmeric powder, red chili powder, coriander powder, and garam masala.",
+      "Add crumbled paneer and toss well on medium-high heat for 2-3 minutes. Do not overcook.",
+      "Garnish with fresh cilantro and a squeeze of lime juice."
+    ],
+    calories: 320,
+    protein: 19,
+    carbs: 8,
+    fat: 24,
+    fiber: 2
+  },
+  {
+    id: "rec-tomato-rice",
+    name: "South Indian Tomato Rice (Thakkali Sadam)",
+    description: "Zesty and tangy tempered rice cooked with sweet ripe tomatoes, crunchy cashews, mustard seeds, and curry leaves.",
+    cuisine: "Indian",
+    prepTime: 10,
+    cookTime: 15,
+    servings: 3,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "Vegan", "Dairy-Free", "Gluten-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Cooked Rice", quantity: "3", unit: "cups" },
+      { name: "Tomato", quantity: "4", unit: "large" },
+      { name: "Onion", quantity: "1", unit: "medium" },
+      { name: "Mustard Seeds", quantity: "1", unit: "tsp" },
+      { name: "Curry Leaves", quantity: "10", unit: "leaves" },
+      { name: "Ginger", quantity: "1", unit: "tsp" },
+      { name: "Turmeric Powder", quantity: "0.5", unit: "tsp" },
+      { name: "Red Chili Powder", quantity: "1", unit: "tsp" },
+      { name: "Vegetable Oil", quantity: "2", unit: "tbsp" }
+    ],
+    instructions: [
+      "Puree half of the tomatoes and finely chop the remaining tomatoes.",
+      "Heat oil in a wide pan. Splutter mustard seeds and add curry leaves and ginger.",
+      "Add sliced onion and fry until translucent.",
+      "Add chopped tomatoes and puree. Add turmeric, chili powder, and salt.",
+      "Cook down until the tomato masala thickens and becomes glossy.",
+      "Add cooled cooked rice gently, folding without breaking the grains.",
+      "Simmer on low for 3 minutes so flavors blend. Serve with papad or raita."
+    ],
+    calories: 290,
+    protein: 5,
+    carbs: 54,
+    fat: 7,
+    fiber: 3
+  },
+  {
+    id: "rec-vegetable-upma",
+    name: "Wholesome Vegetable Upma",
+    description: "Traditional roasted semolina porridge tempered with mustard seeds, crunchy lentils, ginger, and colorful vegetables.",
+    cuisine: "Indian",
+    prepTime: 10,
+    cookTime: 15,
+    servings: 3,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "Vegan", "Dairy-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Semolina (Rava)", quantity: "1", unit: "cup" },
+      { name: "Onion", quantity: "1", unit: "medium" },
+      { name: "Carrot", quantity: "1", unit: "small" },
+      { name: "Green Peas", quantity: "0.25", unit: "cup" },
+      { name: "Ginger", quantity: "1", unit: "tsp" },
+      { name: "Mustard Seeds", quantity: "1", unit: "tsp" },
+      { name: "Curry Leaves", quantity: "8", unit: "leaves" },
+      { name: "Vegetable Oil", quantity: "2", unit: "tbsp" }
+    ],
+    instructions: [
+      "Dry roast semolina on medium flame until light and aromatic (about 4 minutes). Set aside.",
+      "Heat oil in a pan. Splutter mustard seeds and add curry leaves and minced ginger.",
+      "Add chopped onion and fry until soft.",
+      "Add finely diced carrot and green peas with 2.5 cups of water and salt. Bring to a rapid boil.",
+      "Gradually pour the roasted semolina while stirring continuously to prevent lumps.",
+      "Cover with a lid and cook on low heat for 3-4 minutes until water is absorbed.",
+      "Garnish with roasted cashews or coriander and serve warm with coconut chutney."
+    ],
+    calories: 240,
+    protein: 6,
+    carbs: 42,
+    fat: 6,
+    fiber: 3
+  },
+  {
+    id: "rec-poha",
+    name: "Kanda Batata Poha",
+    description: "Light, fluffy flattened rice tossed with crispy potatoes, sweet caramelized onions, roasted peanuts, and lemon.",
+    cuisine: "Indian",
+    prepTime: 8,
+    cookTime: 12,
+    servings: 2,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "Vegan", "Gluten-Free", "Dairy-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Flattened Rice (Poha)", quantity: "2", unit: "cups" },
+      { name: "Potato", quantity: "1", unit: "medium" },
+      { name: "Onion", quantity: "1", unit: "large" },
+      { name: "Peanuts", quantity: "2", unit: "tbsp" },
+      { name: "Mustard Seeds", quantity: "1", unit: "tsp" },
+      { name: "Turmeric Powder", quantity: "0.5", unit: "tsp" },
+      { name: "Lemon Juice", quantity: "1", unit: "tbsp" },
+      { name: "Vegetable Oil", quantity: "2", unit: "tbsp" }
+    ],
+    instructions: [
+      "Rinse poha in a colander under running water for 30 seconds. Drain and keep aside for 5 minutes.",
+      "Heat oil in a pan. Fry peanuts until crunchy, then remove and reserve.",
+      "In the same pan, add mustard seeds and let them pop.",
+      "Add small diced potatoes, cover and cook on low until fork-tender (about 5 minutes).",
+      "Add diced onions and saut\xE9 until translucent. Add turmeric powder and salt.",
+      "Add the softened poha and toss gently until well coated in vibrant yellow color.",
+      "Cover for 2 minutes to steam. Drizzle fresh lemon juice and top with crispy peanuts."
+    ],
+    calories: 260,
+    protein: 5,
+    carbs: 45,
+    fat: 7,
+    fiber: 3
+  },
+  {
+    id: "rec-aloo-paratha",
+    name: "Golden Stuffed Aloo Paratha",
+    description: "Crisp whole-wheat flatbread stuffed with a spiced mashed potato filling, finished with a dab of homemade butter.",
+    cuisine: "Indian",
+    prepTime: 20,
+    cookTime: 15,
+    servings: 4,
+    difficulty: "Medium",
+    imageUrl: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "Dairy-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Whole Wheat Flour", quantity: "2", unit: "cups" },
+      { name: "Potato", quantity: "3", unit: "boiled" },
+      { name: "Onion", quantity: "0.5", unit: "finely chopped" },
+      { name: "Green Chili", quantity: "1", unit: "finely chopped" },
+      { name: "Garam Masala", quantity: "0.5", unit: "tsp" },
+      { name: "Cumin Powder", quantity: "0.5", unit: "tsp" },
+      { name: "Coriander Leaves", quantity: "2", unit: "tbsp" },
+      { name: "Ghee or Oil", quantity: "3", unit: "tbsp" }
+    ],
+    instructions: [
+      "Knead whole wheat flour with water and a pinch of salt into a soft, pliable dough. Rest 15 mins.",
+      "Peel and mash boiled potatoes smoothly. Add onion, green chili, spices, and coriander.",
+      "Divide dough and potato mix into equal balls.",
+      "Roll a dough ball into a 4-inch circle, place potato ball in center, and seal the edges tightly.",
+      "Dust with dry flour and roll out gently into a 7-inch disk without bursting the filling.",
+      "Roast on a hot tawa on both sides until golden brown spots appear, applying ghee or oil.",
+      "Serve sizzling hot with chilled curd and pickle."
+    ],
+    calories: 310,
+    protein: 7,
+    carbs: 48,
+    fat: 10,
+    fiber: 5
+  },
+  {
+    id: "rec-dal-tadka",
+    name: "Restaurant Style Dal Tadka",
+    description: "Creamy yellow lentils simmered with turmeric and garlic, crowned with a sizzling aromatic tadka of ghee, cumin, and dried red chilies.",
+    cuisine: "Indian",
+    prepTime: 10,
+    cookTime: 25,
+    servings: 4,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "High Protein", "Gluten-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Yellow Lentils (Toor Dal)", quantity: "1", unit: "cup" },
+      { name: "Tomato", quantity: "2", unit: "medium" },
+      { name: "Onion", quantity: "1", unit: "medium" },
+      { name: "Garlic", quantity: "5", unit: "cloves" },
+      { name: "Ginger", quantity: "1", unit: "inch" },
+      { name: "Cumin Seeds", quantity: "1", unit: "tsp" },
+      { name: "Turmeric Powder", quantity: "0.5", unit: "tsp" },
+      { name: "Ghee", quantity: "2", unit: "tbsp" }
+    ],
+    instructions: [
+      "Pressure cook rinsed lentils with 3 cups water, turmeric, and half the chopped tomatoes for 3-4 whistles.",
+      "Whisk the cooked dal until smooth and creamy.",
+      "In a pan, heat 1 tbsp ghee. Saut\xE9 chopped onions, remaining tomatoes, and ginger until soft.",
+      "Pour cooked dal into the pan, season with salt, and simmer for 5 minutes.",
+      "Prepare tadka: In a small pan, heat remaining ghee, add cumin seeds, minced garlic, and red chilies.",
+      "Once garlic turns light golden and fragrant, pour the sizzling tadka over the hot dal.",
+      "Garnish with coriander leaves and serve alongside steamed basmati rice or roti."
+    ],
+    calories: 220,
+    protein: 13,
+    carbs: 32,
+    fat: 5,
+    fiber: 8
+  },
+  {
+    id: "rec-chana-masala",
+    name: "Punjabi Chana Masala",
+    description: "Hearty chickpeas braised in a robust, tangy onion-tomato gravy with warm garam masala and dried pomegranate seeds.",
+    cuisine: "Indian",
+    prepTime: 15,
+    cookTime: 25,
+    servings: 4,
+    difficulty: "Medium",
+    imageUrl: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "Vegan", "High Protein", "Gluten-Free", "Dairy-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Chickpeas (Boiled)", quantity: "2", unit: "cups" },
+      { name: "Onion", quantity: "2", unit: "medium" },
+      { name: "Tomato", quantity: "3", unit: "medium" },
+      { name: "Garlic", quantity: "4", unit: "cloves" },
+      { name: "Ginger", quantity: "1", unit: "inch" },
+      { name: "Coriander Powder", quantity: "1", unit: "tbsp" },
+      { name: "Cumin Powder", quantity: "1", unit: "tsp" },
+      { name: "Garam Masala", quantity: "1", unit: "tsp" },
+      { name: "Vegetable Oil", quantity: "2", unit: "tbsp" }
+    ],
+    instructions: [
+      "Blend onions, ginger, and garlic into a fine aromatic paste.",
+      "Puree tomatoes separately in a blender.",
+      "Heat oil in a heavy pot. Add onion paste and fry patiently until deep golden brown.",
+      "Pour in tomato puree and cook until oil begins to separate from the edges.",
+      "Stir in coriander powder, cumin powder, garam masala, red chili, and salt.",
+      "Add boiled chickpeas along with 1 cup of cooking water. Mash a few chickpeas to thicken gravy.",
+      "Simmer on medium-low for 15 minutes. Finish with julienned ginger and cilantro."
+    ],
+    calories: 330,
+    protein: 15,
+    carbs: 48,
+    fat: 9,
+    fiber: 12
+  },
+  {
+    id: "rec-vegetable-fried-rice",
+    name: "Indo-Chinese Vegetable Fried Rice",
+    description: "High-flame wok-tossed jasmine rice loaded with crunchy diced carrots, french beans, garlic, and savory soy sauce.",
+    cuisine: "Asian",
+    prepTime: 15,
+    cookTime: 10,
+    servings: 3,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "Vegan", "Dairy-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Cooked Rice (Cold)", quantity: "3", unit: "cups" },
+      { name: "Carrot", quantity: "1", unit: "medium" },
+      { name: "Capsicum", quantity: "1", unit: "medium" },
+      { name: "Onion", quantity: "1", unit: "medium" },
+      { name: "Garlic", quantity: "5", unit: "cloves" },
+      { name: "Soy Sauce", quantity: "2", unit: "tbsp" },
+      { name: "Black Pepper", quantity: "0.5", unit: "tsp" },
+      { name: "Vegetable Oil", quantity: "2", unit: "tbsp" }
+    ],
+    instructions: [
+      "Ensure cooked rice is cold and grains are separated. Day-old rice works best.",
+      "Heat oil in a smoking-hot wok over high heat.",
+      "Add finely minced garlic and sliced onions; stir-fry for 45 seconds.",
+      "Toss in finely diced carrots and capsicum. Flash stir-fry for 2 minutes to keep them crisp.",
+      "Add the cold rice, cracking any clumps with the back of the spatula.",
+      "Drizzle soy sauce, vinegar, and freshly cracked black pepper around the edges of the wok.",
+      "Toss vigorously on high heat for 2 minutes until smoky and well blended. Serve hot."
+    ],
+    calories: 275,
+    protein: 5,
+    carbs: 49,
+    fat: 7,
+    fiber: 3
+  },
+  {
+    id: "rec-egg-curry",
+    name: "Homestyle Spiced Egg Curry",
+    description: "Golden-fried hard-boiled eggs immersed in a rich, velvety onion-tomato masala flavored with cardamom and fenugreek.",
+    cuisine: "Indian",
+    prepTime: 10,
+    cookTime: 20,
+    servings: 3,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["High Protein", "Gluten-Free", "Dairy-Free"],
+    ingredients: [
+      { name: "Eggs (Hard Boiled)", quantity: "4", unit: "eggs" },
+      { name: "Onion", quantity: "2", unit: "medium" },
+      { name: "Tomato", quantity: "2", unit: "pureed" },
+      { name: "Garlic", quantity: "4", unit: "cloves" },
+      { name: "Ginger", quantity: "1", unit: "inch" },
+      { name: "Turmeric Powder", quantity: "0.5", unit: "tsp" },
+      { name: "Red Chili Powder", quantity: "1", unit: "tsp" },
+      { name: "Garam Masala", quantity: "0.5", unit: "tsp" },
+      { name: "Vegetable Oil", quantity: "2", unit: "tbsp" }
+    ],
+    instructions: [
+      "Make shallow slits on the peeled boiled eggs. Toss with a pinch of turmeric and chili.",
+      "Pan fry eggs in 1 tsp oil until the skin blisters and turns golden. Set aside.",
+      "In the same pan, heat remaining oil. Saut\xE9 finely chopped onions until browned.",
+      "Add minced garlic and ginger; saut\xE9 for 1 minute until fragrant.",
+      "Add tomato puree, chili powder, coriander powder, turmeric, and salt.",
+      "Cook masala until oil oozes out. Add 1 cup water and bring to a simmer.",
+      "Slide in the fried eggs, cover, and simmer for 5 minutes. Top with garam masala."
+    ],
+    calories: 260,
+    protein: 16,
+    carbs: 9,
+    fat: 18,
+    fiber: 2
+  },
+  {
+    id: "rec-palak-paneer",
+    name: "Creamy Palak Paneer",
+    description: "Soft cottage cheese cubes simmered in a luscious blanched spinach gravy enriched with garlic, cumin, and a dash of cream.",
+    cuisine: "Indian",
+    prepTime: 15,
+    cookTime: 15,
+    servings: 4,
+    difficulty: "Medium",
+    imageUrl: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "High Protein", "Gluten-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Spinach", quantity: "300", unit: "grams" },
+      { name: "Paneer", quantity: "200", unit: "grams" },
+      { name: "Onion", quantity: "1", unit: "medium" },
+      { name: "Tomato", quantity: "1", unit: "medium" },
+      { name: "Garlic", quantity: "6", unit: "cloves" },
+      { name: "Ginger", quantity: "1", unit: "inch" },
+      { name: "Green Chili", quantity: "1", unit: "piece" },
+      { name: "Butter", quantity: "1.5", unit: "tbsp" },
+      { name: "Fresh Cream", quantity: "2", unit: "tbsp" }
+    ],
+    instructions: [
+      "Blanch spinach in boiling water for 2 minutes, then immediately transfer to ice-cold water to retain green color.",
+      "Puree blanched spinach with green chili and ginger into a smooth velvet paste.",
+      "Heat butter in a pan. Saut\xE9 chopped garlic and onions until soft.",
+      "Add finely chopped tomato and cook until soft.",
+      "Pour in the vibrant spinach puree and 0.5 cup water. Simmer on low for 5 minutes.",
+      "Gently fold in fresh paneer cubes and season with salt and garam masala.",
+      "Swirl in fresh cream, simmer for 2 minutes, and serve with naan or paratha."
+    ],
+    calories: 290,
+    protein: 16,
+    carbs: 7,
+    fat: 22,
+    fiber: 4
+  },
+  {
+    id: "rec-lemon-rice",
+    name: "South Indian Chitranna (Lemon Rice)",
+    description: "Refreshing aromatic rice infused with fresh lemon juice, crunchy tempered peanuts, mustard seeds, and turmeric.",
+    cuisine: "Indian",
+    prepTime: 5,
+    cookTime: 10,
+    servings: 2,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "Vegan", "Gluten-Free", "Dairy-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Cooked Rice", quantity: "2.5", unit: "cups" },
+      { name: "Lemon Juice", quantity: "2", unit: "tbsp" },
+      { name: "Peanuts", quantity: "2", unit: "tbsp" },
+      { name: "Mustard Seeds", quantity: "1", unit: "tsp" },
+      { name: "Curry Leaves", quantity: "10", unit: "leaves" },
+      { name: "Green Chili", quantity: "2", unit: "slit" },
+      { name: "Turmeric Powder", quantity: "0.5", unit: "tsp" },
+      { name: "Vegetable Oil", quantity: "2", unit: "tbsp" }
+    ],
+    instructions: [
+      "Spread cooked rice on a flat plate and allow it to cool completely.",
+      "Heat oil in a pan over medium heat. Fry peanuts until golden and crisp.",
+      "Add mustard seeds, curry leaves, and slit green chilies. Fry for 30 seconds.",
+      "Turn off heat. Immediately stir in turmeric powder and fresh lemon juice into the oil.",
+      "Pour this aromatic lemon tadka over the cooled rice.",
+      "Season with salt and gently toss until every grain turns a uniform bright sunshine yellow.",
+      "Serve warm or at room temperature with potato fry or pickle."
+    ],
+    calories: 250,
+    protein: 5,
+    carbs: 43,
+    fat: 7,
+    fiber: 2
+  },
+  {
+    id: "rec-chickpea-salad",
+    name: "Zesty Mediterranean Chickpea Salad",
+    description: "Protein-packed salad with tender chickpeas, crisp cucumbers, sweet cherry tomatoes, red onion, and a lemon-oregano vinaigrette.",
+    cuisine: "Mediterranean",
+    prepTime: 10,
+    cookTime: 0,
+    servings: 2,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "Vegan", "High Protein", "Gluten-Free", "Dairy-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Chickpeas (Boiled/Canned)", quantity: "2", unit: "cups" },
+      { name: "Cucumber", quantity: "1", unit: "diced" },
+      { name: "Tomato", quantity: "1", unit: "diced" },
+      { name: "Red Onion", quantity: "0.5", unit: "diced" },
+      { name: "Capsicum", quantity: "0.5", unit: "diced" },
+      { name: "Lemon Juice", quantity: "2", unit: "tbsp" },
+      { name: "Olive Oil", quantity: "2", unit: "tbsp" },
+      { name: "Black Pepper", quantity: "0.5", unit: "tsp" }
+    ],
+    instructions: [
+      "Rinse and drain chickpeas thoroughly.",
+      "In a large mixing bowl, combine chickpeas, diced cucumber, tomatoes, red onion, and capsicum.",
+      "In a small bowl, whisk together extra virgin olive oil, fresh lemon juice, salt, and black pepper.",
+      "Drizzle the dressing over the salad.",
+      "Toss well so all ingredients are thoroughly coated.",
+      "Chill in the refrigerator for 10 minutes before serving for crisper texture."
+    ],
+    calories: 260,
+    protein: 11,
+    carbs: 34,
+    fat: 9,
+    fiber: 9
+  },
+  {
+    id: "rec-vegetable-sandwich",
+    name: "Mumbai Street Veg Toast Sandwich",
+    description: "Crispy toasted sandwich layered with mint chutney, spiced potatoes, sliced tomatoes, cucumbers, onions, and melted cheese.",
+    cuisine: "Indian",
+    prepTime: 10,
+    cookTime: 8,
+    servings: 2,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "Egg-Free"],
+    ingredients: [
+      { name: "Bread", quantity: "4", unit: "slices" },
+      { name: "Potato", quantity: "1", unit: "boiled & sliced" },
+      { name: "Tomato", quantity: "1", unit: "sliced" },
+      { name: "Cucumber", quantity: "0.5", unit: "sliced" },
+      { name: "Onion", quantity: "0.5", unit: "sliced" },
+      { name: "Cheese", quantity: "2", unit: "slices" },
+      { name: "Butter", quantity: "2", unit: "tbsp" },
+      { name: "Chaat Masala", quantity: "0.5", unit: "tsp" }
+    ],
+    instructions: [
+      "Spread butter evenly over all slices of bread.",
+      "Layer thinly sliced boiled potatoes on two bread slices and sprinkle with chaat masala.",
+      "Add sliced cucumbers, tomatoes, and onion rings, dusting each layer with chaat masala.",
+      "Top with a slice of cheese and cover with the remaining bread slices.",
+      "Heat a sandwich toaster or skillet. Toast both sides with butter until golden and crunchy.",
+      "Cut diagonally into quarters and serve with ketchup or green chutney."
+    ],
+    calories: 320,
+    protein: 9,
+    carbs: 40,
+    fat: 14,
+    fiber: 3
+  },
+  {
+    id: "rec-pasta-aglio-olio",
+    name: "Classic Spaghetti Aglio e Olio",
+    description: "Simple Italian perfection: al dente spaghetti tossed in golden garlic-infused olive oil, chili flakes, and fresh parsley.",
+    cuisine: "Italian",
+    prepTime: 5,
+    cookTime: 12,
+    servings: 2,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "Vegan", "Dairy-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Pasta (Spaghetti)", quantity: "200", unit: "grams" },
+      { name: "Garlic", quantity: "6", unit: "cloves, sliced" },
+      { name: "Olive Oil", quantity: "0.25", unit: "cup" },
+      { name: "Chili Flakes", quantity: "1", unit: "tsp" },
+      { name: "Parsley", quantity: "2", unit: "tbsp chopped" },
+      { name: "Salt", quantity: "1", unit: "tsp" }
+    ],
+    instructions: [
+      "Bring a large pot of heavily salted water to boil. Cook spaghetti until 1 minute before al dente.",
+      "While pasta cooks, heat olive oil in a wide pan over low-medium heat.",
+      "Add thinly sliced garlic. Fry slowly until pale golden and fragrant (do not burn).",
+      "Stir in red chili flakes and cook for 30 seconds.",
+      "Transfer cooked pasta directly into the oil along with 0.5 cup of starchy pasta water.",
+      "Toss vigorously over medium flame until a glossy emulsified sauce coats the pasta.",
+      "Sprinkle freshly chopped parsley and serve immediately."
+    ],
+    calories: 380,
+    protein: 10,
+    carbs: 55,
+    fat: 14,
+    fiber: 3
+  },
+  {
+    id: "rec-shakshuka",
+    name: "North African Shakshuka",
+    description: "Poached eggs nestled in a simmered, spiced tomato and roasted bell pepper sauce with cumin, paprika, and feta.",
+    cuisine: "Middle Eastern",
+    prepTime: 10,
+    cookTime: 15,
+    servings: 2,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1590412200988-a436970781fa?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "High Protein", "Gluten-Free"],
+    ingredients: [
+      { name: "Eggs", quantity: "4", unit: "large" },
+      { name: "Tomato", quantity: "4", unit: "ripe, crushed" },
+      { name: "Capsicum", quantity: "1", unit: "diced" },
+      { name: "Onion", quantity: "1", unit: "diced" },
+      { name: "Garlic", quantity: "3", unit: "cloves" },
+      { name: "Cumin Powder", quantity: "1", unit: "tsp" },
+      { name: "Paprika", quantity: "1", unit: "tsp" },
+      { name: "Olive Oil", quantity: "2", unit: "tbsp" }
+    ],
+    instructions: [
+      "Heat olive oil in a skillet. Saut\xE9 onions and capsicum until softened (5 minutes).",
+      "Add minced garlic, cumin, and paprika; cook for 1 minute until fragrant.",
+      "Pour in crushed tomatoes, season with salt and pepper, and simmer for 10 minutes until thickened.",
+      "Use a spoon to create 4 small wells in the bubbling sauce.",
+      "Crack an egg gently into each well.",
+      "Cover skillet with a lid and cook on low heat for 5-7 minutes until egg whites set but yolks remain runny.",
+      "Garnish with parsley and serve straight from the pan with crusty bread."
+    ],
+    calories: 270,
+    protein: 16,
+    carbs: 14,
+    fat: 17,
+    fiber: 3
+  },
+  {
+    id: "rec-tomato-soup",
+    name: "Velvety Roasted Tomato Basil Soup",
+    description: "Comforting, slow-simmered soup made with ripe tomatoes, sweet caramelized onions, roasted garlic, and fragrant fresh basil.",
+    cuisine: "International",
+    prepTime: 10,
+    cookTime: 20,
+    servings: 3,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "Vegan", "Gluten-Free", "Dairy-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Tomato", quantity: "6", unit: "ripe" },
+      { name: "Onion", quantity: "1", unit: "medium" },
+      { name: "Garlic", quantity: "4", unit: "cloves" },
+      { name: "Olive Oil", quantity: "2", unit: "tbsp" },
+      { name: "Vegetable Broth", quantity: "1.5", unit: "cups" },
+      { name: "Basil Leaves", quantity: "10", unit: "leaves" },
+      { name: "Black Pepper", quantity: "0.5", unit: "tsp" }
+    ],
+    instructions: [
+      "Heat olive oil in a deep pot over medium heat.",
+      "Add chopped onion and garlic; cook until translucent and sweet.",
+      "Add quartered fresh tomatoes, a pinch of salt, and black pepper. Cook down for 10 minutes.",
+      "Pour in vegetable broth and simmer gently for 10 minutes.",
+      "Add fresh basil leaves, then blend using an immersion blender until completely silky smooth.",
+      "Adjust seasoning and simmer for another 2 minutes.",
+      "Serve steaming warm with croutons or grilled cheese."
+    ],
+    calories: 140,
+    protein: 3,
+    carbs: 18,
+    fat: 7,
+    fiber: 4
+  },
+  {
+    id: "rec-guacamole",
+    name: "Authentic Fresh Guacamole",
+    description: "Creamy Haas avocados mashed with lime juice, diced jalape\xF1o or green chili, cilantro, and crisp red onion.",
+    cuisine: "Mexican",
+    prepTime: 10,
+    cookTime: 0,
+    servings: 3,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1584278859940-1a74d5386d4e?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "Vegan", "Gluten-Free", "Dairy-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Avocado", quantity: "2", unit: "ripe" },
+      { name: "Tomato", quantity: "1", unit: "finely diced" },
+      { name: "Onion", quantity: "0.5", unit: "finely diced" },
+      { name: "Lime Juice", quantity: "1.5", unit: "tbsp" },
+      { name: "Coriander Leaves", quantity: "2", unit: "tbsp" },
+      { name: "Salt", quantity: "0.5", unit: "tsp" }
+    ],
+    instructions: [
+      "Halve avocados, remove pits, and scoop flesh into a shallow bowl.",
+      "Use a fork to coarsely mash avocado to desired chunkiness.",
+      "Stir in lime juice immediately to lock in freshness and prevent browning.",
+      "Fold in diced tomatoes, red onions, chopped cilantro, and salt.",
+      "Taste and adjust lime or salt to preference.",
+      "Serve immediately with crunchy tortilla chips or as a sandwich spread."
+    ],
+    calories: 190,
+    protein: 3,
+    carbs: 10,
+    fat: 17,
+    fiber: 7
+  },
+  {
+    id: "rec-chicken-stir-fry",
+    name: "Quick Garlic Chicken Stir Fry",
+    description: "Juicy chicken breast strips seared with tender-crisp bell peppers, onions, and carrots in a savory garlic-soy glaze.",
+    cuisine: "Asian",
+    prepTime: 12,
+    cookTime: 10,
+    servings: 2,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["High Protein", "Dairy-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Chicken", quantity: "300", unit: "grams breast, sliced" },
+      { name: "Capsicum", quantity: "1", unit: "sliced" },
+      { name: "Onion", quantity: "1", unit: "sliced" },
+      { name: "Carrot", quantity: "1", unit: "julienned" },
+      { name: "Garlic", quantity: "4", unit: "cloves minced" },
+      { name: "Soy Sauce", quantity: "2", unit: "tbsp" },
+      { name: "Vegetable Oil", quantity: "1.5", unit: "tbsp" },
+      { name: "Black Pepper", quantity: "0.5", unit: "tsp" }
+    ],
+    instructions: [
+      "Season sliced chicken with salt, pepper, and 1 tsp soy sauce.",
+      "Heat oil in a wok over high heat. Add chicken and sear until cooked through and golden (4-5 mins). Remove.",
+      "In the same wok, toss in garlic, onions, carrots, and capsicum. Stir-fry rapidly for 2 minutes.",
+      "Return the seared chicken back to the wok.",
+      "Pour remaining soy sauce and toss everything together on high heat for 1 minute.",
+      "Serve hot over steamed jasmine rice or noodles."
+    ],
+    calories: 340,
+    protein: 36,
+    carbs: 12,
+    fat: 16,
+    fiber: 3
+  },
+  {
+    id: "rec-banana-pancakes",
+    name: "Fluffy Golden Banana Pancakes",
+    description: "Naturally sweetened breakfast pancakes made with ripe mashed bananas, milk, and a hint of warm cinnamon.",
+    cuisine: "American",
+    prepTime: 8,
+    cookTime: 10,
+    servings: 2,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "Egg-Free"],
+    ingredients: [
+      { name: "Banana", quantity: "2", unit: "ripe" },
+      { name: "Flour", quantity: "1", unit: "cup" },
+      { name: "Milk", quantity: "0.75", unit: "cup" },
+      { name: "Baking Powder", quantity: "1", unit: "tsp" },
+      { name: "Butter", quantity: "1", unit: "tbsp melted" },
+      { name: "Cinnamon", quantity: "0.25", unit: "tsp" }
+    ],
+    instructions: [
+      "In a bowl, thoroughly mash ripe bananas with a fork until smooth.",
+      "Whisk in milk and melted butter.",
+      "In a separate bowl, combine flour, baking powder, cinnamon, and a pinch of salt.",
+      "Fold wet banana mixture into dry ingredients until just combined (do not overmix).",
+      "Heat a lightly greased non-stick skillet over medium-low heat.",
+      "Pour 1/4 cup batter for each pancake. Cook until bubbles form on surface (about 2 mins).",
+      "Flip gently and cook until golden brown on the underside. Serve warm with honey or syrup."
+    ],
+    calories: 280,
+    protein: 6,
+    carbs: 56,
+    fat: 4,
+    fiber: 4
+  },
+  {
+    id: "rec-quesadilla",
+    name: "Crispy Veggie & Cheese Quesadilla",
+    description: "Toasted tortilla filled with melted cheese, saut\xE9ed bell peppers, onions, and sweet corn with a crunchy golden crust.",
+    cuisine: "Mexican",
+    prepTime: 8,
+    cookTime: 8,
+    servings: 2,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1618040996337-56904b7850b9?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "Egg-Free"],
+    ingredients: [
+      { name: "Bread or Tortilla", quantity: "2", unit: "pieces" },
+      { name: "Cheese", quantity: "1", unit: "cup shredded" },
+      { name: "Capsicum", quantity: "0.5", unit: "diced" },
+      { name: "Onion", quantity: "0.5", unit: "diced" },
+      { name: "Tomato", quantity: "0.5", unit: "seeded & diced" },
+      { name: "Butter", quantity: "1", unit: "tbsp" }
+    ],
+    instructions: [
+      "Lightly saut\xE9 diced capsicum and onions in 1 tsp butter for 2 minutes; season with salt.",
+      "Place a tortilla in a warm skillet over medium heat.",
+      "Sprinkle half the cheese over one half of the tortilla.",
+      "Add saut\xE9ed veggies and diced tomato, then top with remaining cheese.",
+      "Fold tortilla in half over the filling to create a half-moon.",
+      "Cook for 2-3 minutes per side until tortilla is crispy and cheese is completely melted.",
+      "Slice into wedges and serve with salsa or sour cream."
+    ],
+    calories: 330,
+    protein: 13,
+    carbs: 26,
+    fat: 20,
+    fiber: 3
+  },
+  {
+    id: "rec-greek-salad",
+    name: "Traditional Greek Village Salad",
+    description: "Crisp cucumbers, vine-ripened tomatoes, thinly sliced red onion, salty feta, and Kalamata olives bathed in extra virgin olive oil.",
+    cuisine: "Mediterranean",
+    prepTime: 10,
+    cookTime: 0,
+    servings: 2,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "Gluten-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Cucumber", quantity: "1", unit: "large sliced" },
+      { name: "Tomato", quantity: "2", unit: "ripe cut in wedges" },
+      { name: "Red Onion", quantity: "0.5", unit: "thinly sliced" },
+      { name: "Capsicum", quantity: "0.5", unit: "sliced" },
+      { name: "Cheese (Feta)", quantity: "100", unit: "grams" },
+      { name: "Olive Oil", quantity: "2", unit: "tbsp" },
+      { name: "Oregano", quantity: "0.5", unit: "tsp dried" }
+    ],
+    instructions: [
+      "Wash and cut tomatoes into wedges and cucumber into thick half-moons.",
+      "Slice red onion and bell pepper into delicate rings.",
+      "In a wide serving bowl, toss tomatoes, cucumbers, onions, and bell peppers.",
+      "Place a slab or cubes of feta cheese over the vegetables.",
+      "Generously drizzle extra virgin olive oil over the whole salad.",
+      "Sprinkle dried oregano and coarse sea salt. Serve chilled."
+    ],
+    calories: 220,
+    protein: 7,
+    carbs: 11,
+    fat: 17,
+    fiber: 3
+  },
+  {
+    id: "rec-minestrone",
+    name: "Hearty Classic Minestrone Soup",
+    description: "Nutritious Italian vegetable soup loaded with tomatoes, beans, carrots, pasta, and herbs in a flavorful herb broth.",
+    cuisine: "Italian",
+    prepTime: 15,
+    cookTime: 25,
+    servings: 4,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "Vegan", "Dairy-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Tomato", quantity: "3", unit: "diced" },
+      { name: "Carrot", quantity: "1", unit: "diced" },
+      { name: "Potato", quantity: "1", unit: "diced" },
+      { name: "Green Peas", quantity: "0.5", unit: "cup" },
+      { name: "Onion", quantity: "1", unit: "chopped" },
+      { name: "Garlic", quantity: "3", unit: "cloves" },
+      { name: "Pasta", quantity: "0.5", unit: "cup small shells" },
+      { name: "Olive Oil", quantity: "2", unit: "tbsp" }
+    ],
+    instructions: [
+      "Heat olive oil in a soup pot. Saut\xE9 chopped onion and minced garlic until soft.",
+      "Add carrots and potatoes; cook for 4 minutes.",
+      "Add diced tomatoes, 4 cups water or vegetable broth, salt, and black pepper.",
+      "Bring soup to a boil, then reduce heat and simmer covered for 15 minutes.",
+      "Add green peas and small pasta shells; cook uncovered for 8 minutes until pasta is tender.",
+      "Ladle into warm bowls and garnish with fresh basil."
+    ],
+    calories: 210,
+    protein: 6,
+    carbs: 38,
+    fat: 5,
+    fiber: 5
+  },
+  {
+    id: "rec-garlic-butter-rice",
+    name: "Quick Garlic Butter Fried Rice",
+    description: "Golden skillet-toasted rice tossed in caramelized minced garlic, rich melted butter, and scallions.",
+    cuisine: "Asian",
+    prepTime: 5,
+    cookTime: 10,
+    servings: 2,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "Gluten-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Cooked Rice", quantity: "3", unit: "cups cold" },
+      { name: "Garlic", quantity: "8", unit: "cloves minced" },
+      { name: "Butter", quantity: "2", unit: "tbsp" },
+      { name: "Soy Sauce", quantity: "1", unit: "tbsp" },
+      { name: "Black Pepper", quantity: "0.5", unit: "tsp" },
+      { name: "Vegetable Oil", quantity: "1", unit: "tbsp" }
+    ],
+    instructions: [
+      "Heat oil and 1 tbsp butter in a large skillet over medium-low heat.",
+      "Add minced garlic and fry gently until golden and crispy (watch closely so it does not burn).",
+      "Reserve half of the crispy garlic chips for garnish.",
+      "Turn heat to high, add cold cooked rice to the pan, breaking clumps with a wooden spoon.",
+      "Add remaining butter, soy sauce, and black pepper; stir-fry vigorously for 3 minutes.",
+      "Garnish with reserved crispy garlic chips and serve warm."
+    ],
+    calories: 295,
+    protein: 5,
+    carbs: 48,
+    fat: 9,
+    fiber: 2
+  },
+  {
+    id: "rec-masala-khichdi",
+    name: "Comforting Moong Dal Masala Khichdi",
+    description: "Wholesome one-pot soul food combining rice, yellow lentils, mild vegetables, cumin, and fragrant turmeric.",
+    cuisine: "Indian",
+    prepTime: 10,
+    cookTime: 20,
+    servings: 3,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "High Protein", "Gluten-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Rice", quantity: "0.75", unit: "cup" },
+      { name: "Yellow Lentils (Moong Dal)", quantity: "0.5", unit: "cup" },
+      { name: "Tomato", quantity: "1", unit: "chopped" },
+      { name: "Potato", quantity: "1", unit: "diced" },
+      { name: "Green Peas", quantity: "0.25", unit: "cup" },
+      { name: "Cumin Seeds", quantity: "1", unit: "tsp" },
+      { name: "Turmeric Powder", quantity: "0.5", unit: "tsp" },
+      { name: "Ghee", quantity: "1.5", unit: "tbsp" }
+    ],
+    instructions: [
+      "Rinse rice and moong dal together until water runs clear; soak for 15 minutes.",
+      "Heat ghee in a pressure cooker or heavy pot. Splutter cumin seeds.",
+      "Add diced potatoes, green peas, and tomatoes. Cook for 2 minutes.",
+      "Add turmeric, salt, drained rice, and lentils. Saut\xE9 for 1 minute.",
+      "Pour 4 cups water. Cook for 3-4 whistles on medium heat (or simmer 20 mins covered in a pot).",
+      "Stir gently to achieve a porridge-like consistency. Drizzle a spoonful of hot ghee on top before serving."
+    ],
+    calories: 270,
+    protein: 10,
+    carbs: 46,
+    fat: 5,
+    fiber: 6
+  },
+  {
+    id: "rec-rajma-masala",
+    name: "Rich Punjabi Rajma Masala",
+    description: "Melt-in-the-mouth red kidney beans simmered in a luscious slow-cooked onion, ginger, garlic, and tomato reduction.",
+    cuisine: "Indian",
+    prepTime: 15,
+    cookTime: 30,
+    servings: 4,
+    difficulty: "Medium",
+    imageUrl: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "Vegan", "High Protein", "Gluten-Free", "Dairy-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Kidney Beans (Rajma Boiled)", quantity: "2.5", unit: "cups" },
+      { name: "Onion", quantity: "2", unit: "pureed" },
+      { name: "Tomato", quantity: "3", unit: "pureed" },
+      { name: "Garlic", quantity: "5", unit: "cloves" },
+      { name: "Ginger", quantity: "1", unit: "inch" },
+      { name: "Garam Masala", quantity: "1", unit: "tsp" },
+      { name: "Vegetable Oil", quantity: "2", unit: "tbsp" }
+    ],
+    instructions: [
+      "Heat oil in a heavy pot. Add onion paste and cook slowly until it turns deep mahogany brown.",
+      "Add minced garlic and ginger; fry for 1 minute.",
+      "Pour in tomato puree, coriander powder, cumin powder, turmeric, and salt.",
+      "Cook until the masala leaves the sides of the pot and releases aroma.",
+      "Add boiled red kidney beans with their cooking broth.",
+      "Lightly mash a ladle of beans against the pot wall to thicken the gravy naturally.",
+      "Simmer on gentle low flame for 20 minutes. Finish with garam masala and fresh coriander."
+    ],
+    calories: 310,
+    protein: 14,
+    carbs: 49,
+    fat: 6,
+    fiber: 11
+  },
+  {
+    id: "rec-kadai-paneer",
+    name: "Vibrant Kadai Paneer",
+    description: "Tender cottage cheese and crisp bell peppers tossed in a spicy, freshly pounded coriander-chili spice masala.",
+    cuisine: "Indian",
+    prepTime: 15,
+    cookTime: 15,
+    servings: 3,
+    difficulty: "Medium",
+    imageUrl: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "High Protein", "Gluten-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Paneer", quantity: "250", unit: "grams cubed" },
+      { name: "Capsicum", quantity: "1", unit: "cubed" },
+      { name: "Onion", quantity: "2", unit: "1 cubed, 1 finely chopped" },
+      { name: "Tomato", quantity: "3", unit: "pureed" },
+      { name: "Ginger", quantity: "1", unit: "inch julienned" },
+      { name: "Garlic", quantity: "4", unit: "cloves" },
+      { name: "Garam Masala", quantity: "0.75", unit: "tsp" },
+      { name: "Butter", quantity: "1.5", unit: "tbsp" }
+    ],
+    instructions: [
+      "In a dry pan, lightly toast coriander seeds and dried red chilies, then coarsely grind them.",
+      "Heat 1 tbsp butter in a kadai/wok. Flash fry onion and capsicum cubes for 2 minutes so they stay crunchy. Remove.",
+      "In same pan, add remaining butter, chopped onions, and garlic. Fry until golden.",
+      "Add tomato puree, turmeric, salt, and the freshly ground spices. Cook until oil separates.",
+      "Fold in paneer cubes, saut\xE9ed capsicum, onions, and julienned ginger.",
+      "Toss gently on medium heat for 3 minutes until paneer absorbs the spicy gravy.",
+      "Serve sizzling with butter naan or tandoori roti."
+    ],
+    calories: 340,
+    protein: 18,
+    carbs: 11,
+    fat: 25,
+    fiber: 3
+  },
+  {
+    id: "rec-tamatar-pyaaz-sabzi",
+    name: "Spiced Tomato Onion Sabzi (Tamatar Pyaaz)",
+    description: "A comforting, savory everyday Indian dish made by saut\xE9ing sliced onions with tangy juicy tomatoes, cumin, and warm spices in 10 minutes.",
+    cuisine: "Indian",
+    prepTime: 5,
+    cookTime: 10,
+    servings: 2,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "Vegan", "Gluten-Free", "Dairy-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Tomato", quantity: "3", unit: "ripe chopped" },
+      { name: "Onion", quantity: "2", unit: "medium sliced" },
+      { name: "Cumin Seeds", quantity: "1", unit: "tsp" },
+      { name: "Turmeric Powder", quantity: "0.5", unit: "tsp" },
+      { name: "Red Chilli Powder", quantity: "0.5", unit: "tsp" },
+      { name: "Cooking Oil", quantity: "1.5", unit: "tbsp" }
+    ],
+    instructions: [
+      "Heat oil in a kadai or skillet over medium flame. Add cumin seeds and let them sizzle.",
+      "Add sliced onions and saut\xE9 for 4-5 minutes until soft and golden translucent.",
+      "Add turmeric powder, red chilli powder, and salt. Stir for 30 seconds.",
+      "Toss in diced ripe tomatoes. Mix well and cover with lid for 5 minutes until tomatoes soften into a juicy masala.",
+      "Garnish with fresh coriander leaves and serve warm with roti or paratha."
+    ],
+    calories: 140,
+    protein: 3,
+    carbs: 16,
+    fat: 7,
+    fiber: 4
+  },
+  {
+    id: "rec-tomato-onion-chutney",
+    name: "Authentic Tomato Onion Chutney (Thokku)",
+    description: "A punchy, lip-smacking South Indian spicy relish made with ripe tomatoes, caramelized onions, mustard seeds, and curry leaves.",
+    cuisine: "Indian",
+    prepTime: 5,
+    cookTime: 12,
+    servings: 4,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "Vegan", "Gluten-Free", "Dairy-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Tomato", quantity: "4", unit: "chopped" },
+      { name: "Onion", quantity: "2", unit: "chopped" },
+      { name: "Mustard Seeds", quantity: "1", unit: "tsp" },
+      { name: "Curry Leaves", quantity: "8", unit: "fresh leaves" },
+      { name: "Red Chilli Powder", quantity: "1", unit: "tsp" },
+      { name: "Oil", quantity: "2", unit: "tbsp" }
+    ],
+    instructions: [
+      "Heat 1 tbsp oil in a pan. Saut\xE9 chopped onions and tomatoes until tender, then cool and blend to a smooth or coarse paste.",
+      "In the same pan, heat remaining oil. Add mustard seeds and let them crackle, followed by fresh curry leaves.",
+      "Pour in the blended tomato-onion paste, add red chilli powder and salt.",
+      "Cook on medium heat for 7-8 minutes until the chutney thickens and oil oozes from the sides.",
+      "Serve hot with idli, dosa, rice, or roti."
+    ],
+    calories: 110,
+    protein: 2,
+    carbs: 12,
+    fat: 6,
+    fiber: 3
+  },
+  {
+    id: "rec-kachumber-salad",
+    name: "Fresh Tomato Onion Kachumber Salad",
+    description: "A crisp, refreshing Indian street-style salad with crunchy onions, juicy diced tomatoes, tangy lemon juice, and aromatic herbs.",
+    cuisine: "Indian",
+    prepTime: 5,
+    cookTime: 0,
+    servings: 2,
+    difficulty: "Easy",
+    imageUrl: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80",
+    dietaryTags: ["Vegetarian", "Vegan", "Gluten-Free", "Dairy-Free", "Egg-Free"],
+    ingredients: [
+      { name: "Tomato", quantity: "2", unit: "firm finely diced" },
+      { name: "Onion", quantity: "1", unit: "finely diced" },
+      { name: "Lemon Juice", quantity: "1", unit: "tbsp" },
+      { name: "Salt", quantity: "0.5", unit: "tsp" }
+    ],
+    instructions: [
+      "Finely dice the ripe tomatoes and crisp onions.",
+      "Toss both together in a salad bowl.",
+      "Drizzle fresh lemon juice and sprinkle salt and roasted cumin if desired.",
+      "Toss thoroughly and serve immediately as a crunchy, refreshing side."
+    ],
+    calories: 55,
+    protein: 2,
+    carbs: 11,
+    fat: 0.5,
+    fiber: 2
+  }
+];
+
+// server/services/recipeMatcher.ts
+var STEM_MAP = {
+  tomatoes: "tomato",
+  potatoes: "potato",
+  onions: "onion",
+  eggs: "egg",
+  chilies: "chili",
+  chilli: "chili",
+  chillies: "chili",
+  peppers: "pepper",
+  carrots: "carrot",
+  cloves: "clove",
+  leaves: "leaf",
+  peas: "pea",
+  peanuts: "peanut",
+  haldi: "turmeric",
+  jeera: "cumin",
+  dhania: "coriander",
+  rai: "mustard",
+  sasive: "mustard",
+  elaichi: "cardamom",
+  dalchini: "cinnamon",
+  garammasala: "garam masala",
+  mirch: "chilli",
+  curryleaves: "curry leaves",
+  karibevu: "curry leaves",
+  karimenasu: "pepper",
+  kalimirch: "pepper",
+  kasurimethi: "kasuri methi",
+  chaatmasala: "chaat masala",
+  aaloo: "potato",
+  alugadde: "potato",
+  pyaaz: "onion",
+  eerulli: "onion",
+  lehsun: "garlic",
+  bellulli: "garlic",
+  adrak: "ginger",
+  shunti: "ginger"
+};
+var CORE_PROTEINS = [
+  { key: "egg", matches: ["egg", "eggs"] },
+  { key: "omelette", matches: ["egg", "eggs"] },
+  { key: "omelet", matches: ["egg", "eggs"] },
+  { key: "shakshuka", matches: ["egg", "eggs"] },
+  { key: "chicken", matches: ["chicken"] },
+  { key: "fish", matches: ["fish", "salmon", "prawn", "shrimp"] },
+  { key: "salmon", matches: ["salmon", "fish"] },
+  { key: "prawn", matches: ["prawn", "prawns", "shrimp"] },
+  { key: "paneer", matches: ["paneer"] },
+  { key: "tofu", matches: ["tofu"] },
+  { key: "mushroom", matches: ["mushroom", "mushrooms"] }
+];
+function normalizeIngredientName(name) {
+  let cleaned = name.toLowerCase().replace(/\(.*?\)/g, "").replace(/[^a-z0-9\s]/g, " ").trim();
+  const words = cleaned.split(/\s+/).map((w) => STEM_MAP[w] || w);
+  return words.join(" ");
+}
+function isIngredientMatch(userIng, recipeIngName) {
+  const normUser = normalizeIngredientName(userIng);
+  const normRecipe = normalizeIngredientName(recipeIngName);
+  if (!normUser || !normRecipe) return false;
+  if (normUser === normRecipe) return true;
+  if (normRecipe.includes(normUser) || normUser.includes(normRecipe)) {
+    return true;
+  }
+  const userWords = normUser.split(" ");
+  const recipeWords = normRecipe.split(" ");
+  return userWords.some((w) => w.length > 2 && recipeWords.includes(w));
+}
+function matchRecipes(recipes, userIngredients, filters = {}) {
+  const normalizedUserList = userIngredients.map((i) => i.trim()).filter(Boolean);
+  const results = [];
+  for (const recipe of recipes) {
+    if (filters.diet && filters.diet.toLowerCase() !== "all") {
+      const targetDiet = filters.diet.toLowerCase();
+      const hasDiet = recipe.dietaryTags.some((tag) => tag.toLowerCase() === targetDiet);
+      if (!hasDiet) continue;
+    }
+    if (filters.cuisine && filters.cuisine.toLowerCase() !== "all") {
+      if (recipe.cuisine.toLowerCase() !== filters.cuisine.toLowerCase()) {
+        continue;
+      }
+    }
+    if (filters.maxPrepTime && filters.maxPrepTime > 0) {
+      if (recipe.prepTime > filters.maxPrepTime) {
+        continue;
+      }
+    }
+    if (filters.difficulty && filters.difficulty.toLowerCase() !== "all") {
+      if (recipe.difficulty.toLowerCase() !== filters.difficulty.toLowerCase()) {
+        continue;
+      }
+    }
+    const matchedNames = [];
+    const missing = [];
+    for (const ing of recipe.ingredients) {
+      const matchFound = normalizedUserList.some((userIng) => isIngredientMatch(userIng, ing.name));
+      if (matchFound) {
+        matchedNames.push(ing.name);
+      } else {
+        missing.push(ing);
+      }
+    }
+    const totalIngredients = recipe.ingredients.length;
+    const matchCount = matchedNames.length;
+    const matchPercentage = totalIngredients > 0 ? Math.round(matchCount / totalIngredients * 100) : 0;
+    if (normalizedUserList.length > 0 && matchCount === 0) {
+      continue;
+    }
+    if (normalizedUserList.length > 0) {
+      const lowerName = recipe.name.toLowerCase();
+      const isMissingRequiredCore = CORE_PROTEINS.some((core) => {
+        if (!lowerName.includes(core.key)) return false;
+        const userHasCore = normalizedUserList.some(
+          (userIng) => core.matches.some((m) => isIngredientMatch(userIng, m))
+        );
+        return !userHasCore;
+      });
+      if (isMissingRequiredCore) {
+        continue;
+      }
+    }
+    if (filters.minMatch !== void 0 && filters.minMatch > 0) {
+      if (matchPercentage < filters.minMatch) {
+        continue;
+      }
+    }
+    results.push({
+      ...recipe,
+      matchedIngredients: matchedNames,
+      missingIngredients: missing,
+      matchPercentage,
+      isReadyToCook: missing.length === 0
+    });
+  }
+  results.sort((a, b) => {
+    if (b.matchPercentage !== a.matchPercentage) {
+      return b.matchPercentage - a.matchPercentage;
+    }
+    if (a.missingIngredients.length !== b.missingIngredients.length) {
+      return a.missingIngredients.length - b.missingIngredients.length;
+    }
+    return a.prepTime - b.prepTime;
+  });
+  return results;
+}
+
+// server/apiHandler.ts
+var pantryStore = [
+  { id: "p-1", name: "Tomato", quantity: 4, unit: "pieces", category: "Vegetables", expiry_date: "2026-10-20" },
+  { id: "p-2", name: "Onion", quantity: 3, unit: "pieces", category: "Vegetables", expiry_date: "2026-10-25" },
+  { id: "p-3", name: "Eggs", quantity: 6, unit: "pieces", category: "Dairy & Eggs", expiry_date: "2026-10-18" },
+  { id: "p-4", name: "Rice", quantity: 1, unit: "kg", category: "Grains & Pasta", expiry_date: "2026-12-01" },
+  { id: "p-5", name: "Garlic", quantity: 1, unit: "head", category: "Vegetables", expiry_date: "2026-10-30" }
+];
+var shoppingStore = [];
+var favoritesStore = [];
+function json(res, data, status = 200) {
+  res.statusCode = status;
+  res.setHeader("Content-Type", "application/json");
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.end(JSON.stringify(data));
+}
+function parseBody(req) {
+  return new Promise((resolve) => {
+    if (req.body && typeof req.body === "object") {
+      return resolve(req.body);
+    }
+    let data = "";
+    req.on("data", (chunk) => {
+      data += chunk;
+    });
+    req.on("end", () => {
+      try {
+        resolve(data ? JSON.parse(data) : {});
+      } catch {
+        resolve({});
+      }
+    });
+  });
+}
+async function handler(req, res) {
+  if (req.method === "OPTIONS") {
+    res.statusCode = 204;
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE, OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    return res.end();
+  }
+  const url = new URL(req.url, "http://localhost");
+  const pathname = url.pathname.replace(/\/$/, "") || "/";
+  if (pathname === "/api/health") {
+    return json(res, {
+      status: "ok",
+      app: "PantryPal AI",
+      timestamp: (/* @__PURE__ */ new Date()).toISOString(),
+      recipesCount: SEED_RECIPES.length
+    });
+  }
+  if (pathname === "/api/recipes" && req.method === "GET") {
+    return json(res, SEED_RECIPES);
+  }
+  if (pathname === "/api/recipes/suggest" && req.method === "POST") {
+    const body = await parseBody(req);
+    const ingredients = body.ingredients || [];
+    const filters = body.filters || {};
+    const matched = matchRecipes(SEED_RECIPES, ingredients, filters);
+    return json(res, { total: matched.length, recipes: matched });
+  }
+  if (pathname.startsWith("/api/recipes/") && req.method === "GET") {
+    const id = pathname.replace("/api/recipes/", "");
+    const found = SEED_RECIPES.find((r) => r.id === id);
+    if (!found) return json(res, { error: "Recipe not found" }, 404);
+    return json(res, found);
+  }
+  if (pathname === "/api/pantry") {
+    if (req.method === "GET") {
+      return json(res, pantryStore);
+    }
+    if (req.method === "POST") {
+      const body = await parseBody(req);
+      const newItem = {
+        id: `p-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+        name: body.name || "Ingredient",
+        quantity: parseFloat(body.quantity) || 1,
+        unit: body.unit || "piece",
+        category: body.category || "General",
+        expiry_date: body.expiry_date || null,
+        created_at: (/* @__PURE__ */ new Date()).toISOString()
+      };
+      pantryStore.push(newItem);
+      return json(res, newItem, 201);
+    }
+  }
+  if (pathname.startsWith("/api/pantry/") && req.method === "DELETE") {
+    const id = pathname.replace("/api/pantry/", "");
+    pantryStore = pantryStore.filter((p) => p.id !== id);
+    return json(res, { success: true });
+  }
+  if (pathname === "/api/shopping-list") {
+    if (req.method === "GET") {
+      return json(res, shoppingStore);
+    }
+    if (req.method === "POST") {
+      const body = await parseBody(req);
+      if (Array.isArray(body)) {
+        const added = body.map((item) => {
+          const s = {
+            id: `s-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+            name: item.name,
+            quantity: parseFloat(item.quantity) || 1,
+            unit: item.unit || "item",
+            checked: false,
+            recipe_id: item.recipeId || null,
+            created_at: (/* @__PURE__ */ new Date()).toISOString()
+          };
+          shoppingStore.push(s);
+          return s;
+        });
+        return json(res, added, 201);
+      }
+      const newItem = {
+        id: `s-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+        name: body.name || "Item",
+        quantity: parseFloat(body.quantity) || 1,
+        unit: body.unit || "item",
+        checked: false,
+        recipe_id: body.recipeId || null,
+        created_at: (/* @__PURE__ */ new Date()).toISOString()
+      };
+      shoppingStore.push(newItem);
+      return json(res, newItem, 201);
+    }
+  }
+  if (pathname.startsWith("/api/shopping-list/") && req.method === "PATCH") {
+    const id = pathname.replace("/api/shopping-list/", "");
+    const body = await parseBody(req);
+    const item = shoppingStore.find((s) => s.id === id);
+    if (item) item.checked = !!body.checked;
+    return json(res, item || { error: "Not found" });
+  }
+  if (pathname.startsWith("/api/shopping-list/") && req.method === "DELETE") {
+    const id = pathname.replace("/api/shopping-list/", "");
+    if (id === "completed") {
+      shoppingStore = shoppingStore.filter((s) => !s.checked);
+    } else {
+      shoppingStore = shoppingStore.filter((s) => s.id !== id);
+    }
+    return json(res, { success: true });
+  }
+  if (pathname === "/api/favorites") {
+    if (req.method === "GET") {
+      const favRecipes = favoritesStore.map((fId) => SEED_RECIPES.find((r) => r.id === fId)).filter(Boolean);
+      return json(res, favRecipes);
+    }
+    if (req.method === "POST") {
+      const body = await parseBody(req);
+      if (body.recipeId && !favoritesStore.includes(body.recipeId)) {
+        favoritesStore.push(body.recipeId);
+      }
+      return json(res, { success: true });
+    }
+  }
+  if (pathname.startsWith("/api/favorites/") && req.method === "DELETE") {
+    const id = pathname.replace("/api/favorites/", "");
+    favoritesStore = favoritesStore.filter((fId) => fId !== id);
+    return json(res, { success: true });
+  }
+  if (pathname === "/api/ai/status") {
+    return json(res, { hasAiKey: false, model: "gpt-4o-mini" });
+  }
+  if (pathname === "/api/ai/chat" && req.method === "POST") {
+    const body = await parseBody(req);
+    const msg = (body.message || "").toLowerCase();
+    let reply = "Here's a delicious recommendation: Try preparing an authentic Indian Masala Omelette or Vegetable Pulao with your available ingredients! Add fresh coriander, turmeric, and pinch of salt for rich flavor.";
+    if (msg.includes("egg") || msg.includes("omlet") || msg.includes("omelette")) {
+      reply = "With eggs and onions, you can make a wonderful Indian Masala Omelette! Beat 2 eggs with a pinch of turmeric, chopped onions, and chilies. Cook on medium heat for 2 minutes on each side.";
+    } else if (msg.includes("rice") || msg.includes("chitranna") || msg.includes("lemon")) {
+      reply = "For leftover rice, Lemon Rice (Chitranna) is ideal! Temper mustard seeds, curry leaves, and peanuts in oil, stir into cooled rice with fresh lemon juice and turmeric.";
+    } else if (msg.includes("tomato") || msg.includes("onion")) {
+      reply = "Tomato and onion make a fabulous Quick Chutney or Tamatar Pyaaz Sabzi! Saut\xE9 cumin seeds, add sliced onions till golden, toss diced tomatoes with chili powder, and simmer 5 minutes.";
+    }
+    return json(res, { response: reply, source: "fallback" });
+  }
+  return json(res, { error: "Endpoint not found" }, 404);
+}
+export {
+  handler as default
+};
